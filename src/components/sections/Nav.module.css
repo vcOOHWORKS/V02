@@ -210,23 +210,33 @@
   }
 }
 
+/* Nine categories in a 3 × 3 grid: a small arch beside each title */
 .megaGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 32px;
 }
 .tile {
   display: grid;
-  gap: 4px;
+  grid-template-columns: 76px minmax(0, 1fr);
+  grid-template-rows: 1fr auto auto 1fr;
+  column-gap: 18px;
+  row-gap: 3px;
 }
 /* Small jharokha arch */
 .tileImage {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 11;
-  margin-bottom: 12px;
+  grid-row: 1 / -1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  border-radius: 140px 140px 4px 4px / 100px 100px 4px 4px;
+  border-radius: 999px 999px 4px 4px;
+}
+.tileTitle {
+  grid-row: 2;
+}
+.tileKeywords {
+  grid-row: 3;
 }
 .tilePhoto {
   transition: transform 1.2s var(--ease-soft);

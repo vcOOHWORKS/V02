@@ -19,6 +19,7 @@ export const metadata: Metadata = pageMeta({
 function usedOn(slot: string) {
   if (slot.startsWith("demo-")) return { label: "Results gallery · demo images", href: "/results" };
   if (slot.startsWith("doctor-")) return { label: "Our experts · demo portrait", href: "/about#experts" };
+  if (slot === "founder") return { label: "Our founder · demo portrait", href: "/founder" };
   if (slot === "hero") return { label: "Home page", href: "/" };
   if (slot === "salon") return { label: "Salon & nails", href: "/salon-nails" };
   if (slot.startsWith("salon-")) return { label: `Salon & nails · ${slot === "salon-hair" ? "Hair" : "Nails"}`, href: "/salon-nails" };

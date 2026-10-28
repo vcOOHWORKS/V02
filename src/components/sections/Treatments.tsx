@@ -11,14 +11,14 @@ export function Treatments() {
         <Reveal className="section-head">
           <div>
             <h2 className="display">
-              Eight ways
+              Nine ways
               <br />
               we <em>care for you.</em>
             </h2>
           </div>
           <div className={styles.headSide}>
             <p>
-              Clinical care for skin, hair and body, built around how Indian women actually live: long days, changing
+              Clinical care for skin, hair, body and smile, built around how Indian women actually live: long days, changing
               hormones, weddings and festivals, and a preference for results that look like you.
             </p>
             <Link href="/treatments" className={styles.all}>

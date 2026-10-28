@@ -69,6 +69,7 @@ Placeholders are flagged with `placeholder: true` in `src/content/site.ts` and l
 - **Photography.** Slots use Unsplash photos, hotlinked from Unsplash's CDN as their API guidelines require, with every photographer credited on `/credits`. Replace them with the clinic's own shoot when it exists.
 - **Demo results (must go before launch).** The results gallery shows stock photos as before/after pairs, labelled "Demo images" on every frame. Set `demoMode = false` in `src/content/results.ts`, delete `src/content/demo-results-photos.json`, and add real, consented cases. Publishing stock photos as clinic results breaks ASCI and NMC advertising rules.
 - **Doctors.** Names, credentials and quotes are invented, and the portraits are demo stock photos (`doctor-*` slots in `unsplash-photos.json`, labelled "Demo portrait"). Replace with the real team's own photos, including registration numbers.
+- **Founder.** `/founder` is a placeholder profile (name, letter, chapters in `src/content/founder.ts`, demo portrait in the `founder` photo slot). Replace with the founder's own words and photo.
 - **Testimonials.** Samples only. Use real ones only with written consent.
 - **Clinic details.** Address, phone and WhatsApp number (`clinic.whatsapp`; set it and the floating WhatsApp button and Help panel link to `wa.me`, and a real `clinic.phone` adds a "Call us" link).
 - **Legal pages.** Privacy, terms and medical disclaimer are drafts written for an Indian clinic (DPDP Act 2023, Bengaluru jurisdiction). Have a lawyer review them.

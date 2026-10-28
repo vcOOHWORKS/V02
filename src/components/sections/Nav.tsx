@@ -123,12 +123,12 @@ export function Nav({ art, current }: Props) {
                 <span className={`${styles.chevron} ${menu ? styles.chevronOpen : ""}`} aria-hidden="true" />
               </button>
 
-              {/* Mega menu: an introduction beside all eight categories as image tiles */}
+              {/* Mega menu: an introduction beside all nine categories as image tiles */}
               <div id="treatments-menu" className={`${styles.mega} ${menu ? styles.megaOpen : ""}`} inert={!menu}>
                 <div className={`wrap ${styles.megaInner}`}>
                   <div className={styles.megaIntro}>
                     <p className={styles.megaHeading}>
-                      Eight ways we <em>care for you.</em>
+                      Nine ways we <em>care for you.</em>
                     </p>
                     <p className={styles.megaText}>Not sure where to begin? A consultation is the best first step.</p>
                     <div className={styles.megaLinks}>

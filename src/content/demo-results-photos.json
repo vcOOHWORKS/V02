@@ -446,5 +446,61 @@
       "profile": "https://unsplash.com/@justbeingblythe",
       "page": "https://unsplash.com/photos/a-young-black-woman-with-short-hair-gazes-thoughtfully-AmLDjIBAEG8"
     }
+  },
+  "demo-dental-1-before": {
+    "id": "1XU-MamoqME",
+    "raw": "https://images.unsplash.com/photo-1620149028059-b71de2561440?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTB8fGluZGlhbiUyMHdvbWFuJTIwc21pbGluZyUyMHRlZXRofGVufDF8MXx8fDE3OTMxOTAxNjl8MA&ixlib=rb-4.1.0",
+    "width": 2848,
+    "height": 4272,
+    "color": "#262626",
+    "position": "center 40%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Jes\u00fas Vidal",
+      "profile": "https://unsplash.com/@jesuszun18",
+      "page": "https://unsplash.com/photos/woman-in-blue-sleeveless-top-smiling-1XU-MamoqME"
+    }
+  },
+  "demo-dental-1-after": {
+    "id": "6luXq9r2z1s",
+    "raw": "https://images.unsplash.com/photo-1590496467384-cb0ddfdd0fd7?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTd8fGluZGlhbiUyMHdvbWFuJTIwc21pbGluZyUyMHRlZXRofGVufDF8MXx8fDE3OTMxOTAxNjl8MA&ixlib=rb-4.1.0",
+    "width": 3448,
+    "height": 4592,
+    "color": "#262626",
+    "position": "center 40%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Alexandre Lecocq",
+      "profile": "https://unsplash.com/@mr_alexandre",
+      "page": "https://unsplash.com/photos/woman-in-gray-long-sleeve-shirt-smiling-6luXq9r2z1s"
+    }
+  },
+  "demo-dental-2-before": {
+    "id": "zvI6A_tEx5w",
+    "raw": "https://images.unsplash.com/photo-1586187777054-7a0dccc60118?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMHdvbWFuJTIwc21pbGluZyUyMHRlZXRofGVufDF8MXx8fDE3OTMxOTAxNjl8MA&ixlib=rb-4.1.0",
+    "width": 3456,
+    "height": 5184,
+    "color": "#8c5940",
+    "position": "center 40%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "HamZa NOUASRIA",
+      "profile": "https://unsplash.com/@hamza01nsr",
+      "page": "https://unsplash.com/photos/woman-with-brown-hair-smiling-zvI6A_tEx5w"
+    }
+  },
+  "demo-dental-2-after": {
+    "id": "_NWWfqiQKsU",
+    "raw": "https://images.unsplash.com/photo-1790575187751-bb1f1e01a894?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTV8fGluZGlhbiUyMHdvbWFuJTIwc21pbGluZyUyMHRlZXRofGVufDF8MXx8fDE3OTMxOTAxNjl8MA&ixlib=rb-4.1.0",
+    "width": 2160,
+    "height": 3840,
+    "color": "#735940",
+    "position": "center 40%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Vitaly Gariev",
+      "profile": "https://unsplash.com/@silverkblack",
+      "page": "https://unsplash.com/photos/smiling-woman-with-curly-hair-_NWWfqiQKsU"
+    }
   }
 }

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/results"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/salon-nails"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/about"), lastModified: siteUpdated, changeFrequency: "yearly", priority: 0.8 },
+    { url: absoluteUrl("/founder"), lastModified: siteUpdated, changeFrequency: "yearly", priority: 0.7 },
     { url: absoluteUrl("/branches"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/treatments"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.9 },
     ...categories.map((c) => ({

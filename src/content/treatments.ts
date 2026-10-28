@@ -1,4 +1,4 @@
-// Treatment categories, mirroring the clinic's current menu.
+// Treatment categories, mirroring the clinic's current menu, plus dental care.
 // Clinical details (durations, sessions, downtime, FAQ answers) are indicative
 // placeholders and must be reviewed by the VO2 medical team before launch.
 
@@ -526,7 +526,7 @@ export const categories: Category[] = [
         a: "We do not offer PMU during pregnancy or breastfeeding, or if you are prone to keloid scarring. Some medical conditions need a doctor's approval first.",
       },
     ],
-    related: ["medi-facials", "non-surgical-aesthetics", "skin"],
+    related: ["medi-facials", "non-surgical-aesthetics", "dental"],
   },
   {
     slug: "body",
@@ -676,6 +676,98 @@ export const categories: Category[] = [
       },
     ],
     related: ["hair", "body", "non-surgical-aesthetics"],
+  },
+  {
+    slug: "dental",
+    title: "Dental & smile care",
+    heading: ["Dental &", "smile care"],
+    keywords: "Whitening, aligners, implants",
+    tagline: "A healthy smile, and one that still looks like yours.",
+    summary: "Check-ups, cleaning, whitening, clear aligners, veneers and implants, led by a dentist.",
+    intro:
+      "Your smile is part of your face, so we plan it with the same restraint as everything else at VO2. A dentist checks your teeth and gums first, then suggests the least invasive way to get the result you want: healthy, comfortable and natural, never a row of identical white tiles.",
+    tone: "linear-gradient(172deg,#f1e7df 0%,#dcb7a5 52%,#a5584a 100%)",
+    brief: "A woman mid-laugh, soft daylight, natural teeth. Warmth, not a toothpaste advert.",
+    concerns: ["Stained or dull teeth", "Crooked or gapped teeth", "Chipped teeth", "Missing teeth", "Gum health", "Sensitivity", "Bad breath", "Smile confidence"],
+    items: [
+      {
+        name: "Dental check-up & cleaning",
+        description: "A full examination with digital X-rays where needed, then scaling and polishing to remove plaque, tartar and surface stains.",
+        duration: "45 min",
+        sessions: "Every 6 months",
+        downtime: "None",
+      },
+      {
+        name: "Teeth whitening",
+        description: "Professional in-clinic whitening, or custom take-home trays, at a strength chosen to protect your enamel and avoid sensitivity.",
+        duration: "60–90 min",
+        sessions: "1 in clinic, or 2 weeks at home",
+        downtime: "Possible mild sensitivity for 1–2 days",
+      },
+      {
+        name: "Clear aligners",
+        description: "Near-invisible, removable aligners that move crooked or gapped teeth gradually, planned with a digital scan of your smile.",
+        duration: "30 min reviews",
+        sessions: "6–18 months, reviewed every 6–8 weeks",
+        downtime: "Slight pressure with each new set",
+      },
+      {
+        name: "Veneers & bonding",
+        description: "Tooth-coloured bonding or thin porcelain veneers to repair chips, close small gaps and even out shape, keeping as much natural tooth as possible.",
+        duration: "60–90 min per visit",
+        sessions: "1–3 visits",
+        downtime: "None",
+      },
+      {
+        name: "Smile design",
+        description: "A digital preview of your new smile, planned around your face, lips and gum line before any treatment begins.",
+        duration: "60 min",
+        sessions: "1 planning visit",
+        downtime: "None",
+      },
+      {
+        name: "Dental implants",
+        description: "A titanium implant that replaces a missing tooth at the root, topped with a crown matched to your natural teeth.",
+        duration: "60–90 min per stage",
+        sessions: "2–3 stages over 3–6 months",
+        downtime: "2–3 days of tenderness after placement",
+      },
+    ],
+    steps: [
+      { title: "Examine", body: "A full check of your teeth, gums and bite, with digital X-rays or a 3D scan only where they are needed." },
+      { title: "Preview", body: "For cosmetic work, a digital preview of the result, so you can see and adjust your smile before anything changes." },
+      { title: "Treat", body: "Treatment in a calm, private room, with numbing where needed and breaks whenever you ask for them." },
+      { title: "Maintain", body: "A written care plan, a follow-up on WhatsApp within 48 hours, and reminders for six-monthly check-ups." },
+    ],
+    note: {
+      quote: "The best smile work is the kind people notice as 'you look well', not 'you've had your teeth done'.",
+      name: "Dr. Riya Shetty",
+      role: "Cosmetic Dentist · BDS, MDS (Prosthodontics)",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "Does teeth whitening damage enamel?",
+        a: "Professional whitening at the right strength, supervised by a dentist, does not damage healthy enamel. Some people feel mild sensitivity for a day or two, which settles on its own.",
+      },
+      {
+        q: "How long do whitening results last?",
+        a: "Usually one to two years, depending on tea, coffee, smoking and how you care for your teeth. A short top-up keeps the shade.",
+      },
+      {
+        q: "Am I too old for aligners?",
+        a: "No. Teeth can be moved at any age as long as the gums and bone are healthy, which your dentist checks first.",
+      },
+      {
+        q: "Do implants hurt?",
+        a: "The area is numbed, so placement itself is not painful. Most people feel tender for two or three days and manage with simple pain relief.",
+      },
+      {
+        q: "Can I combine dental work with other treatments?",
+        a: "Yes. Many women plan a smile treatment alongside skin or aesthetic care before a wedding or event. Your doctors will plan the timing together.",
+      },
+    ],
+    related: ["non-surgical-aesthetics", "medi-facials", "permanent-makeup"],
   },
 ];
 

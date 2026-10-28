@@ -59,7 +59,8 @@
   padding-inline: 18px 20px;
   color: var(--color-ivory);
   background: var(--color-kohl);
-  border-color: transparent;
+  /* A light ring keeps it visible over the deep kohl bands */
+  border-color: rgb(243 239 233 / 0.28);
 }
 @media (hover: hover) {
   .help:hover {

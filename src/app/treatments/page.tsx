@@ -13,7 +13,7 @@ import styles from "@/components/treatment/treatment.module.css";
 export const metadata: Metadata = pageMeta({
   title: "Treatments",
   description:
-    "Skin, medi facials, laser, hair, non-surgical aesthetics, permanent makeup, body and advanced treatments at VO2, Bengaluru. Doctor-led, planned around Indian skin.",
+    "Skin, medi facials, laser, hair, non-surgical aesthetics, permanent makeup, body, advanced and dental care at VO2, Bengaluru. Doctor-led, planned around Indian skin.",
   path: "/treatments",
 });
 
@@ -38,7 +38,7 @@ export default function TreatmentsIndex() {
             Every treatment, <em>one intention.</em>
           </h1>
           <p className={styles.indexLead}>
-            Eight areas of care, each led by a doctor and planned around Indian skin. If you are not sure where to start,
+            Nine areas of care, each led by a doctor and planned around you. If you are not sure where to start,
             begin with a consultation and we will guide you.
           </p>
           <div className={styles.kolam} aria-hidden="true" />

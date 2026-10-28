@@ -65,6 +65,9 @@ export function Footer() {
                 <Link href="/about">About us</Link>
               </li>
               <li>
+                <Link href="/founder">Our founder</Link>
+              </li>
+              <li>
                 <Link href="/branches">Branches</Link>
               </li>
               <li>

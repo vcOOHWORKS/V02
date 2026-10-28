@@ -47,6 +47,8 @@ const demo: DemoCase[] = [
   { id: "demo-body-2", n: 2, treatment: "body", concern: "Rough, uneven skin", sessions: "3 sessions", timeline: "8 weeks", doctor: "Dr. Meera Nair" },
   { id: "demo-advanced-1", n: 1, treatment: "advanced", concern: "Freckles and pigmentation", sessions: "3 sessions", timeline: "12 weeks", doctor: "Dr. Ananya Rao" },
   { id: "demo-advanced-2", n: 2, treatment: "advanced", concern: "Loss of firmness", sessions: "2 sessions", timeline: "3 months", doctor: "Dr. Ananya Rao" },
+  { id: "demo-dental-1", n: 1, treatment: "dental", concern: "Crooked teeth", sessions: "Clear aligners", timeline: "11 months", doctor: "Dr. Riya Shetty" },
+  { id: "demo-dental-2", n: 2, treatment: "dental", concern: "Stained teeth", sessions: "1 session", timeline: "Same day", doctor: "Dr. Riya Shetty" },
 ];
 
 export const demoCases = demo.map(({ n, ...c }) => ({

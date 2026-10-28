@@ -17,7 +17,7 @@ import { absoluteUrl, pageMeta, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   description:
-    "Doctor-led dermatology and wellness for the modern Indian woman. Skin, hair, laser, aesthetics and hormonal health in Bengaluru. Natural results, thoughtful rituals.",
+    "Doctor-led dermatology and wellness for the modern Indian woman. Skin, hair, laser, aesthetics, dental and hormonal health in Bengaluru. Natural results, thoughtful rituals.",
   path: "/",
   rss: true,
 });

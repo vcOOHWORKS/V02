@@ -125,6 +125,13 @@ export default function AboutPage() {
               Ancient roots, <em>modern care.</em>
             </span>
           </Link>
+          <Link href="/founder" className={styles.onwardCard}>
+            <Motif name="rosette" stroke="rgba(151,48,46,.5)" className={styles.onwardArt} />
+            <span className={styles.onwardLabel}>Our founder</span>
+            <span className={styles.onwardTitle}>
+              Why VO2 <em>exists.</em>
+            </span>
+          </Link>
           <Link href="/branches" className={styles.onwardCard}>
             <Motif name="padma" stroke="rgba(151,48,46,.5)" className={styles.onwardArt} />
             <span className={styles.onwardLabel}>Branches</span>
