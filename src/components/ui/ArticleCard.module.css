@@ -30,6 +30,39 @@
   transition: transform 1.6s var(--ease-soft);
 }
 
+.text {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+/* Lead article: cover beside the text */
+.feature {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 56px;
+}
+.feature .cover {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 0;
+}
+.feature .title {
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.08;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+}
+.feature .excerpt {
+  max-width: 34rem;
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  .feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}
+
 .category {
   font-size: 10.5px;
   letter-spacing: 0.28em;

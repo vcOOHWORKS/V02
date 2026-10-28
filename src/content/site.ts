@@ -16,6 +16,7 @@ export const clinic = {
 
 // Treatments has its own mega menu in the nav; these are the remaining links.
 export const nav = [
+  { label: "Salon & nails", href: "/salon-nails" },
   { label: "Results", href: "/results" },
   { label: "About", href: "/about" },
   { label: "Branches", href: "/branches" },

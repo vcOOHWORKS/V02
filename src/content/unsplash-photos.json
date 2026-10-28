@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "id": "f49XhYbpiA0",
+    "raw": "https://images.unsplash.com/photo-1536766768598-e09213fdcf22?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8aW5kaWFuJTIwd29tYW4lMjBiZWF1dHklMjBwb3J0cmFpdHxlbnwxfDF8fHwxNzkzMTg4NTUzfDA&ixlib=rb-4.1.0",
+    "width": 3192,
+    "height": 4782,
+    "color": "#260c0c",
+    "position": "center 22%",
+    "alt": "A confident woman in a softly draped ochre dupatta, lit gently against a dark background",
+    "credit": {
+      "name": "Danie Franco",
+      "profile": "https://unsplash.com/@dani_franco",
+      "page": "https://unsplash.com/photos/portrait-photography-of-woman-wearing-brown-headscarf-f49XhYbpiA0"
+    }
+  },
+  "skin": {
+    "id": "RbIcMsh0NSk",
+    "raw": "https://images.unsplash.com/photo-1761718210089-ba3bb5ccb54f?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8ZmFjaWFsJTIwc2tpbmNhcmUlMjB0cmVhdG1lbnQlMjB3b21hbnxlbnwxfDF8fHwxNzkzMTg3OTY0fDA&ixlib=rb-4.1.0",
+    "width": 5000,
+    "height": 7500,
+    "color": "#402626",
+    "position": "center 35%",
+    "alt": "A therapist applying a cream mask during a facial treatment",
+    "credit": {
+      "name": "kimia kazemi",
+      "profile": "https://unsplash.com/@kimick",
+      "page": "https://unsplash.com/photos/a-person-receiving-a-facial-treatment-RbIcMsh0NSk"
+    }
+  },
+  "medi-facials": {
+    "id": "2OVrIfOXDDY",
+    "raw": "https://images.unsplash.com/photo-1761718210055-e83ca7e2c9ad?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8N3x8ZmFjaWFsJTIwbWFzayUyMHNwYSUyMHRyZWF0bWVudHxlbnwxfDF8fHwxNzkzMTg3OTY1fDA&ixlib=rb-4.1.0",
+    "width": 5000,
+    "height": 7500,
+    "color": "#260c0c",
+    "position": "center 40%",
+    "alt": "A peel being brushed onto a client's face during a medical facial",
+    "credit": {
+      "name": "kimia kazemi",
+      "profile": "https://unsplash.com/@kimick",
+      "page": "https://unsplash.com/photos/beautician-applying-facial-mask-to-womans-face-2OVrIfOXDDY"
+    }
+  },
+  "laser": {
+    "id": "iN2ObRIy5Mc",
+    "raw": "https://images.unsplash.com/photo-1785861775561-c6db7da314a0?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8bGFzZXIlMjBza2luJTIwdHJlYXRtZW50JTIwY2xpbmljfGVufDF8MXx8fDE3OTMxODc5NjV8MA&ixlib=rb-4.1.0",
+    "width": 6336,
+    "height": 8448,
+    "color": "#d9d9d9",
+    "position": "center 30%",
+    "alt": "A client wearing protective goggles during a laser treatment",
+    "credit": {
+      "name": "Sum Sum",
+      "profile": "https://unsplash.com/@surprisechef",
+      "page": "https://unsplash.com/photos/technician-performing-laser-hair-removal-on-a-clients-chin-iN2ObRIy5Mc"
+    }
+  },
+  "hair": {
+    "id": "DDuSURd66ns",
+    "raw": "https://images.unsplash.com/photo-1760551937661-cfcd23dcf7d1?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTF8fHdvbWFuJTIwbG9uZyUyMGRhcmslMjBoYWlyfGVufDF8MXx8fDE3OTMxODc5NjZ8MA&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#262626",
+    "position": "center 30%",
+    "alt": "A woman with long, dark, healthy hair",
+    "credit": {
+      "name": "amin naderloei",
+      "profile": "https://unsplash.com/@aminnaderloei",
+      "page": "https://unsplash.com/photos/young-woman-in-a-white-shirt-looks-directly-forward-DDuSURd66ns"
+    }
+  },
+  "non-surgical-aesthetics": {
+    "id": "aZliw_XDfUU",
+    "raw": "https://images.unsplash.com/photo-1731355771317-b2ab72c79124?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTF8fGFlc3RoZXRpYyUyMGNsaW5pYyUyMGZhY2UlMjB0cmVhdG1lbnR8ZW58MXwxfHx8MTc5MzE4Nzk2N3ww&ixlib=rb-4.1.0",
+    "width": 3456,
+    "height": 4659,
+    "color": "#d9d9d9",
+    "position": "center 40%",
+    "alt": "A practitioner preparing a client's skin for an aesthetic treatment",
+    "credit": {
+      "name": "Studio Michael França",
+      "profile": "https://unsplash.com/@studiomikefranca",
+      "page": "https://unsplash.com/photos/a-woman-getting-a-facial-mask-on-her-face-aZliw_XDfUU"
+    }
+  },
+  "permanent-makeup": {
+    "id": "FznzCnePmbw",
+    "raw": "https://images.unsplash.com/photo-1636820531452-d63abb2d4008?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NXx8ZXllYnJvd3MlMjBjbG9zZXVwJTIwd29tYW58ZW58MXwxfHx8MTc5MzE4Nzk2N3ww&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 5000,
+    "color": "#260c0c",
+    "position": "center 45%",
+    "alt": "A close view of a natural, defined eyebrow",
+    "credit": {
+      "name": "Tony Litvyak",
+      "profile": "https://unsplash.com/@justatony",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-person-with-a-tooth-brush-in-their-mouth-FznzCnePmbw"
+    }
+  },
+  "body": {
+    "id": "7yeqemd-p90",
+    "raw": "https://images.unsplash.com/photo-1745327883508-b6cd32e5dde5?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8c3BhJTIwbWFzc2FnZSUyMGJhY2slMjB0cmVhdG1lbnR8ZW58MXwxfHx8MTc5MzE4Nzk2OHww&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#734026",
+    "position": "center",
+    "alt": "A therapist's hands working gently on a client's back",
+    "credit": {
+      "name": "Jakub Klucký",
+      "profile": "https://unsplash.com/@jakubklucky",
+      "page": "https://unsplash.com/photos/massage-therapist-giving-a-back-massage-7yeqemd-p90"
+    }
+  },
+  "advanced": {
+    "id": "qV0uZSffBb4",
+    "raw": "https://images.unsplash.com/photo-1733685372632-a611004ae5b5?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NXx8ZG9jdG9yJTIwcGF0aWVudCUyMGNvbnN1bHRhdGlvbiUyMHdvbWFufGVufDF8MXx8fDE3OTMxODc5Njl8MA&ixlib=rb-4.1.0",
+    "width": 4160,
+    "height": 6240,
+    "color": "#d9c0c0",
+    "position": "center",
+    "alt": "A doctor in conversation with a client in a calm, bright consultation room",
+    "credit": {
+      "name": "Alexander Mass",
+      "profile": "https://unsplash.com/@alexandermassph",
+      "page": "https://unsplash.com/photos/a-woman-sitting-at-a-table-in-front-of-a-mirror-qV0uZSffBb4"
+    }
+  },
+  "salon": {
+    "id": "Xr12kfinkYA",
+    "raw": "https://images.unsplash.com/photo-1675034741473-afed58a142e8?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8aGFpciUyMHNhbG9uJTIwd29tYW4lMjBzdHlsaW5nfGVufDF8MXx8fDE3OTMxODc5Njl8MA&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#d9d9c0",
+    "position": "center 30%",
+    "alt": "A stylist working on a client's long dark hair",
+    "credit": {
+      "name": "Vinicius \"amnx\" Amano",
+      "profile": "https://unsplash.com/@viniciusamano",
+      "page": "https://unsplash.com/photos/a-woman-cutting-another-womans-hair-in-a-salon-Xr12kfinkYA"
+    }
+  },
+  "salon-hair": {
+    "id": "a3xr2mVjT5M",
+    "raw": "https://images.unsplash.com/photo-1560869713-bf165a9cfac1?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Nnx8aGFpcmRyZXNzZXIlMjBoYWlyJTIwY2FyZXxlbnwxfDF8fHwxNzkzMTg3OTcwfDA&ixlib=rb-4.1.0",
+    "width": 3776,
+    "height": 6720,
+    "color": "#260c0c",
+    "position": "center",
+    "alt": "A stylist's hands moving through soft, wavy hair",
+    "credit": {
+      "name": "Baylee Gramling",
+      "profile": "https://unsplash.com/@bayleejadegramling",
+      "page": "https://unsplash.com/photos/blonde-hair-a3xr2mVjT5M"
+    }
+  },
+  "salon-nails": {
+    "id": "vtQHwU4F13s",
+    "raw": "https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8bWFuaWN1cmUlMjBuYWlscyUyMGhhbmRzfGVufDF8MXx8fDE3OTMxODc5NzB8MA&ixlib=rb-4.1.0",
+    "width": 3376,
+    "height": 5387,
+    "color": "#d9d9c0",
+    "position": "center",
+    "alt": "Hands with soft, neat nude manicured nails",
+    "credit": {
+      "name": "Chelson Tamares",
+      "profile": "https://unsplash.com/@jd_chon",
+      "page": "https://unsplash.com/photos/hand-with-light-pink-manicured-nails-vtQHwU4F13s"
+    }
+  },
+  "branch-bengaluru": {
+    "id": "1v-wxDITIH8",
+    "raw": "https://images.unsplash.com/photo-1630245783610-824bda5ec1c8?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8Y2FsbSUyMG1pbmltYWwlMjBjbGluaWMlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzkzMTg3OTcxfDA&ixlib=rb-4.1.0",
+    "width": 4480,
+    "height": 6720,
+    "color": "#c0a68c",
+    "position": "center",
+    "alt": "A calm clinic corner with warm wooden arched shelves and a single flower",
+    "credit": {
+      "name": "QingYu",
+      "profile": "https://unsplash.com/@kukaka",
+      "page": "https://unsplash.com/photos/white-roses-in-clear-glass-vase-on-white-wooden-shelf-1v-wxDITIH8"
+    }
+  },
+  "pcos-pigmentation": {
+    "id": "Fd0V5JpVfGI",
+    "raw": "https://images.unsplash.com/photo-1786171118415-07653ed8cf99?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8OHx8c2tpbmNhcmUlMjBzZXJ1bSUyMGJvdHRsZXN8ZW58MXwwfHx8MTc5MzE4Nzk3MXww&ixlib=rb-4.1.0",
+    "width": 4864,
+    "height": 3328,
+    "color": "#c08c73",
+    "position": "center",
+    "alt": "A dropper bottle of serum on soft sand-coloured fabric",
+    "credit": {
+      "name": "mansi yadav",
+      "profile": "https://unsplash.com/@mansiyadav0308",
+      "page": "https://unsplash.com/photos/brown-glass-dropper-bottle-on-sand-Fd0V5JpVfGI"
+    }
+  },
+  "bengaluru-monsoon-hair": {
+    "id": "kIjpeU000n8",
+    "raw": "https://images.unsplash.com/photo-1567960699877-b134ad1caef8?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8N3x8bW9uc29vbiUyMHJhaW4lMjBpbmRpYXxlbnwxfDB8fHwxNzkzMTg3OTcyfDA&ixlib=rb-4.1.0",
+    "width": 5184,
+    "height": 3456,
+    "color": "#d9d9d9",
+    "position": "center",
+    "alt": "Misty green hills under monsoon clouds",
+    "credit": {
+      "name": "Sanjeev Malhotra",
+      "profile": "https://unsplash.com/@sanmal1996",
+      "page": "https://unsplash.com/photos/a-lush-green-hillside-covered-in-clouds-and-trees-kIjpeU000n8"
+    }
+  },
+  "bridal-skin-timeline": {
+    "id": "lKwp3-FQomY",
+    "raw": "https://images.unsplash.com/photo-1542042161784-26ab9e041e89?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwYnJpZGV8ZW58MXwwfHx8MTc5MzE4Nzk3M3ww&ixlib=rb-4.1.0",
+    "width": 5760,
+    "height": 3840,
+    "color": "#f3d9a6",
+    "position": "center",
+    "alt": "A bride's hands with mehendi and bangles",
+    "credit": {
+      "name": "Khadija Yousaf",
+      "profile": "https://unsplash.com/@kography",
+      "page": "https://unsplash.com/photos/person-holding-hands-wearing-gold-colored-ring-lKwp3-FQomY"
+    }
+  },
+  "laser-hair-reduction-indian-skin": {
+    "id": "HtXyytr9304",
+    "raw": "https://images.unsplash.com/photo-1713085085470-fba013d67e65?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8bGFzZXIlMjBoYWlyJTIwcmVtb3ZhbHxlbnwxfDB8fHwxNzkzMTg3OTczfDA&ixlib=rb-4.1.0",
+    "width": 5760,
+    "height": 3840,
+    "color": "#c0c0c0",
+    "position": "center 40%",
+    "alt": "A practitioner treating a relaxed client with a laser handpiece",
+    "credit": {
+      "name": "Look Studio",
+      "profile": "https://unsplash.com/@lookphoto",
+      "page": "https://unsplash.com/photos/a-woman-getting-a-facial-peel-from-a-doctor-HtXyytr9304"
+    }
+  },
+  "sunscreen-indian-skin": {
+    "id": "pswXxvM7M5s",
+    "raw": "https://images.unsplash.com/photo-1744117611494-c7692800a141?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8N3x8c3Vuc2NyZWVuJTIwc2tpbnxlbnwxfDB8fHwxNzkzMTg3OTc0fDA&ixlib=rb-4.1.0",
+    "width": 9504,
+    "height": 6336,
+    "color": "#0c2626",
+    "position": "center",
+    "alt": "A woman squeezing sunscreen into her hand outdoors",
+    "credit": {
+      "name": "PLANTADEA",
+      "profile": "https://unsplash.com/@plantadea",
+      "page": "https://unsplash.com/photos/woman-applies-lotion-from-a-tube-outdoors-pswXxvM7M5s"
+    }
+  },
+  "postpartum-hair-fall": {
+    "id": "aUtvHsu8Uzk",
+    "raw": "https://images.unsplash.com/photo-1583710457367-47de0ea21fef?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8bW90aGVyJTIwYmFieXxlbnwxfDB8fHwxNzkzMTg3OTc0fDA&ixlib=rb-4.1.0",
+    "width": 5184,
+    "height": 3456,
+    "color": "#f3f3f3",
+    "position": "center",
+    "alt": "A mother holding her newborn baby close",
+    "credit": {
+      "name": "Hollie Santos",
+      "profile": "https://unsplash.com/@holliesantos",
+      "page": "https://unsplash.com/photos/woman-in-white-shirt-carrying-baby-aUtvHsu8Uzk"
+    }
+  },
+  "medi-facial-or-salon-facial": {
+    "id": "16mHHrY3PUk",
+    "raw": "https://images.unsplash.com/photo-1741934023052-26baf5535088?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8OXx8ZmFjaWFsJTIwdHJlYXRtZW50fGVufDF8MHx8fDE3OTMxODc5NzV8MA&ixlib=rb-4.1.0",
+    "width": 6000,
+    "height": 4000,
+    "color": "#d9c0a6",
+    "position": "center",
+    "alt": "A therapist's hands giving a calm facial massage",
+    "credit": {
+      "name": "Ionela Mat",
+      "profile": "https://unsplash.com/@ionelaaaaa",
+      "page": "https://unsplash.com/photos/woman-enjoying-a-facial-massage-with-closed-eyes-16mHHrY3PUk"
+    }
+  },
+  "microblading-or-powder-brows": {
+    "id": "LqD9vhzxl34",
+    "raw": "https://images.unsplash.com/photo-1570390740204-3494e4c6fe55?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTB8fGV5ZWJyb3clMjBtaWNyb2JsYWRpbmd8ZW58MXwwfHx8MTc5MzE4Nzk3NXww&ixlib=rb-4.1.0",
+    "width": 5451,
+    "height": 3802,
+    "color": "#d9a68c",
+    "position": "center",
+    "alt": "A close view of a woman's eye and eyebrow in soft light",
+    "credit": {
+      "name": "Andriyko Podilnyk",
+      "profile": "https://unsplash.com/@andriyko",
+      "page": "https://unsplash.com/photos/woman-with-right-brown-eye-LqD9vhzxl34"
+    }
+  },
+  "first-consultation-at-vo2": {
+    "id": "iyeUwItlIPk",
+    "raw": "https://images.unsplash.com/photo-1758691462878-6edc3d3da1be?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Nnx8ZGVybWF0b2xvZ2lzdCUyMGNvbnN1bHRhdGlvbnxlbnwxfDB8fHwxNzkzMTg3OTc2fDA&ixlib=rb-4.1.0",
+    "width": 3840,
+    "height": 2160,
+    "color": "#c0c0c0",
+    "position": "center 35%",
+    "alt": "A smiling doctor at her desk during a consultation",
+    "credit": {
+      "name": "Vitaly Gariev",
+      "profile": "https://unsplash.com/@silverkblack",
+      "page": "https://unsplash.com/photos/doctor-consults-with-patient-in-medical-office-iyeUwItlIPk"
+    }
+  },
+  "caring-for-nail-extensions": {
+    "id": "yiyzz1PedMs",
+    "raw": "https://images.unsplash.com/photo-1667207229735-266c430cca15?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Nnx8bmFpbCUyMGFydHxlbnwxfDB8fHwxNzkzMTg3OTc3fDA&ixlib=rb-4.1.0",
+    "width": 3936,
+    "height": 2624,
+    "color": "#c0c0c0",
+    "position": "center",
+    "alt": "Hands with neat nude nails holding a cup",
+    "credit": {
+      "name": "Yosuke Ota",
+      "profile": "https://unsplash.com/@yosuke_ota",
+      "page": "https://unsplash.com/photos/a-pair-of-hands-holding-a-white-mug-yiyzz1PedMs"
+    }
+  }
+}

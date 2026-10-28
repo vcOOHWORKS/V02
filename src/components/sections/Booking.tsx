@@ -5,7 +5,7 @@ import { categories } from "@/content/treatments";
 import { ConsultForm } from "./ConsultForm";
 import styles from "./Booking.module.css";
 
-const concerns = [...categories.map((c) => c.title), "Not sure yet"];
+const concerns = [...categories.map((c) => c.title), "Salon & nails", "Not sure yet"];
 
 // An invitation card resting on the brick band, like a patrika on silk.
 // `defaultConcern` preselects a treatment when the section sits on its page.

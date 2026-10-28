@@ -5,7 +5,7 @@ import { ArticleCard } from "@/components/ui/ArticleCard";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Motif } from "@/components/ui/Motif";
 import { Reveal } from "@/components/ui/Reveal";
-import { articles } from "@/content/journal";
+import { articlesByDate } from "@/content/journal";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import styles from "@/components/journal/journal.module.css";
 
@@ -49,8 +49,11 @@ export default function JournalIndex() {
 
       <section className="band">
         <div className={`wrap ${styles.indexGridWrap}`}>
+          <Reveal className={styles.featureWrap}>
+            <ArticleCard article={articlesByDate[0]} feature />
+          </Reveal>
           <Reveal stagger className={`swipe-md ${styles.grid}`}>
-            {articles.map((a) => (
+            {articlesByDate.slice(1).map((a) => (
               <ArticleCard key={a.slug} article={a} />
             ))}
           </Reveal>

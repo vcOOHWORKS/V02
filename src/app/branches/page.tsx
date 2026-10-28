@@ -4,7 +4,7 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { Booking } from "@/components/sections/Booking";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Motif } from "@/components/ui/Motif";
-import { Photo, hasPhoto } from "@/components/ui/Photo";
+import { Photo, PhotoCredit, hasPhoto } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { branches, clinic, visitPlan } from "@/content/site";
 import { categories, treatmentHref } from "@/content/treatments";
@@ -73,6 +73,7 @@ export default function BranchesPage() {
                 <div className={styles.branchMedia}>
                   <figure className={styles.branchArch} style={{ background: b.tone }}>
                     <Photo name={`branch-${b.slug}`} sizes="(max-width: 900px) 90vw, 460px" />
+                    <PhotoCredit name={`branch-${b.slug}`} />
                     {!hasPhoto(`branch-${b.slug}`) && (
                       <Motif name="lotus" stroke="rgba(252,250,248,.4)" className={styles.branchArt} />
                     )}

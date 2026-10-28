@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 1 },
     { url: absoluteUrl("/our-story"), lastModified: siteUpdated, changeFrequency: "yearly", priority: 0.8 },
     { url: absoluteUrl("/results"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.8 },
+    { url: absoluteUrl("/salon-nails"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/about"), lastModified: siteUpdated, changeFrequency: "yearly", priority: 0.8 },
     { url: absoluteUrl("/branches"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/treatments"), lastModified: siteUpdated, changeFrequency: "monthly", priority: 0.9 },
@@ -26,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.6,
     })),
+    { url: absoluteUrl("/credits"), lastModified: siteUpdated, changeFrequency: "yearly", priority: 0.2 },
     ...legalDocs.map((d) => ({
       url: absoluteUrl(`/${d.slug}`),
       lastModified: d.updated,

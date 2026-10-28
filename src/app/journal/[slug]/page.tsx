@@ -5,9 +5,9 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { Booking } from "@/components/sections/Booking";
 import { ArticleCard } from "@/components/ui/ArticleCard";
 import { JsonLd } from "@/components/ui/JsonLd";
-import { Photo } from "@/components/ui/Photo";
+import { Photo, PhotoCredit } from "@/components/ui/Photo";
 import { Prose } from "@/components/ui/Prose";
-import { articles, formatDate, getArticle, readingMinutes } from "@/content/journal";
+import { articles, articlesByDate, formatDate, getArticle, readingMinutes } from "@/content/journal";
 import { getCategory, treatmentHref } from "@/content/treatments";
 import { absoluteUrl, breadcrumbLd, pageMeta, siteName } from "@/lib/seo";
 import styles from "@/components/journal/journal.module.css";
@@ -39,7 +39,7 @@ export default async function ArticlePage(props: PageProps<"/journal/[slug]">) {
 
   const path = `/journal/${article.slug}`;
   const treatments = article.treatments.map(getCategory).filter((c) => c !== undefined);
-  const more = articles.filter((a) => a.slug !== article.slug);
+  const more = articlesByDate.filter((a) => a.slug !== article.slug).slice(0, 3);
 
   return (
     <SiteShell>
@@ -92,9 +92,10 @@ export default async function ArticlePage(props: PageProps<"/journal/[slug]">) {
             </p>
           </div>
           <div className="wrap">
-            <div className={`enter ${styles.cover}`} style={{ "--enter-step": 3 } as React.CSSProperties} aria-hidden="true">
+            <div className={`enter ${styles.cover}`} style={{ "--enter-step": 3 } as React.CSSProperties}>
               <i />
               <Photo name={article.slug} sizes="(max-width: 1320px) 100vw, 1288px" eager />
+              <PhotoCredit name={article.slug} />
             </div>
           </div>
         </header>
@@ -106,13 +107,18 @@ export default async function ArticlePage(props: PageProps<"/journal/[slug]">) {
               <p className={styles.asideName}>{article.author.name}</p>
               <p className={styles.asideRole}>{article.author.role}</p>
             </div>
-            {treatments.length > 0 && (
+            {(treatments.length > 0 || article.alsoSee?.length) && (
               <div className={styles.asideBlock}>
-                <p className={styles.asideLabel}>Related treatments</p>
+                <p className={styles.asideLabel}>{treatments.length ? "Related treatments" : "Related"}</p>
                 <ul className={styles.asideLinks}>
                   {treatments.map((t) => (
                     <li key={t.slug}>
                       <Link href={treatmentHref(t.slug)}>{t.title}</Link>
+                    </li>
+                  ))}
+                  {article.alsoSee?.map((l) => (
+                    <li key={l.href}>
+                      <Link href={l.href}>{l.label}</Link>
                     </li>
                   ))}
                 </ul>

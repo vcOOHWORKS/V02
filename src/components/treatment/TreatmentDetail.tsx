@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ResultsGallery } from "@/components/results/ResultsGallery";
 import { Booking } from "@/components/sections/Booking";
 import { Motif } from "@/components/ui/Motif";
-import { Photo, hasPhoto } from "@/components/ui/Photo";
+import { Photo, PhotoCredit, hasPhoto } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { TreatmentCard } from "@/components/ui/TreatmentCard";
 import { defaultSteps, getCategory, type Category } from "@/content/treatments";
@@ -56,6 +56,7 @@ function Hero({ c }: { c: Category }) {
           <figure className={styles.arch} style={{ background: c.tone }}>
             <Photo name={c.slug} sizes="(max-width: 900px) 400px, 470px" eager />
             <span className={styles.archJaali} aria-hidden="true" />
+            <PhotoCredit name={c.slug} />
             {!hasPhoto(c.slug) && (
               <figcaption className="brief">
                 <b>Shoot brief</b>

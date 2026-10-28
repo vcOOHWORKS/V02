@@ -1,5 +1,5 @@
 import { Motif } from "@/components/ui/Motif";
-import { Photo, hasPhoto } from "@/components/ui/Photo";
+import { Photo, PhotoCredit, hasPhoto } from "@/components/ui/Photo";
 import { hero } from "@/content/site";
 import styles from "./Hero.module.css";
 
@@ -37,6 +37,7 @@ export function Hero() {
           <Motif name="lotus" stroke="rgba(151,48,46,.16)" className={styles.lotus} />
           <figure className={styles.portrait}>
             <Photo name="hero" sizes="(max-width: 900px) 380px, 460px" eager />
+            <PhotoCredit name="hero" />
             {!hasPhoto("hero") && (
               <figcaption className="brief">
                 <b>Shoot brief · Hero</b>

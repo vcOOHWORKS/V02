@@ -430,6 +430,28 @@ em {
   }
 }
 
+/* Photo credit on large feature images */
+.photo-credit {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  z-index: 3;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgb(26 11 12 / 0.38);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: rgb(243 239 233 / 0.92);
+}
+.photo-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgb(243 239 233 / 0.4);
+  text-underline-offset: 2px;
+}
+
 /* Spinner for buttons while a form is sending */
 .spinner {
   display: inline-block;
@@ -446,9 +468,9 @@ em {
   }
 }
 
-/* Inline text links inside content share one hover treatment */
+/* Inline text links inside page content share one treatment (not the footer) */
 .prose-link,
-:where(p, dd, li) > a:where(:not([class])) {
+main :where(p, dd, li) > a:where(:not([class])) {
   border-bottom: 1px solid var(--color-brick);
   transition:
     color 0.3s var(--ease-soft),
@@ -456,7 +478,7 @@ em {
 }
 @media (hover: hover) {
   .prose-link:hover,
-  :where(p, dd, li) > a:where(:not([class])):hover {
+  main :where(p, dd, li) > a:where(:not([class])):hover {
     color: var(--color-brick);
   }
 }
@@ -469,7 +491,11 @@ em {
   footer nav[aria-label="Legal"] a,
   a[class*="allLink"],
   a[class*="bookLink"],
-  a[class*="galleryLink"] {
+  a[class*="galleryLink"],
+  a[class*="_all"],
+  a[class*="_rss"],
+  a[class*="toTop"],
+  main dd > a {
     display: inline-block;
     padding-block: 10px;
     margin-block: -10px;

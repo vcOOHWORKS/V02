@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArticleCard } from "@/components/ui/ArticleCard";
 import { Reveal } from "@/components/ui/Reveal";
-import { articles } from "@/content/journal";
+import { articlesByDate } from "@/content/journal";
 import { journal } from "@/content/site";
 import styles from "./Journal.module.css";
 
@@ -24,7 +24,7 @@ export function Journal() {
         </Reveal>
 
         <Reveal stagger className={`swipe-md ${styles.posts}`}>
-          {articles.slice(0, 3).map((a) => (
+          {articlesByDate.slice(0, 3).map((a) => (
             <ArticleCard key={a.slug} article={a} />
           ))}
         </Reveal>

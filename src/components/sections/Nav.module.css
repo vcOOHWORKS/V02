@@ -473,12 +473,15 @@
 
 /* ---------- Breakpoints ---------- */
 
-@media (max-width: 1200px) {
+@media (max-width: 1320px) {
   .city {
     display: none;
   }
+}
+@media (max-width: 1200px) {
   .menu {
-    gap: 30px;
+    gap: 24px;
+    letter-spacing: 0.16em;
   }
   .megaInner {
     grid-template-columns: 220px minmax(0, 1fr);

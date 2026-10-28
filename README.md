@@ -20,7 +20,8 @@ Next.js 16 (App Router, Cache Components, Turbopack), React 19, Tailwind CSS v4,
 | --- | --- |
 | `src/content/site.ts` | **Home-page copy.** Doctors, quotes, journal posts, clinic details, footer. Edit here, not in components. |
 | `src/content/treatments.ts` | **The eight treatment categories**: every treatment, duration, sessions, downtime, FAQs, doctor's note and related categories. Drives the home grid, mega menu, `/treatments` and each `/treatments/[slug]` page. |
-| `src/content/images.ts` | **Photo map.** One entry per slot (`hero`, a treatment slug, a journal slug). Empty slots fall back to a warm tone. |
+| `src/content/images.ts` | **Photo map.** One entry per slot (`hero`, a treatment slug, a journal slug, `salon*`, `branch-*`). Filled from `unsplash-photos.json`; a local photo (`kind: "local"`) can replace any slot. Empty slots fall back to a warm tone. |
+| `scripts/unsplash/` | Scripts to search Unsplash and record picks (see its README). The API key lives only in `.env.local`. |
 | `src/proxy.ts` | Returns a real 404 for unknown treatment slugs (pages stream, so `notFound()` alone can only send a soft 404). |
 | `src/app/globals.css` | Brand tokens (`@theme`), shared classes (`.wrap`, `.eyebrow`, `.display`, `.btn-*`, `.grain`, `.tone-light`) and scroll-reveal rules. |
 | `src/lib/motifs.ts` | The five traditional motifs, generated from geometry. Tiling versions are exposed as `--motif-*` CSS variables on `<html>`. |
@@ -65,7 +66,7 @@ Next.js 16 (App Router, Cache Components, Turbopack), React 19, Tailwind CSS v4,
 
 Placeholders are flagged with `placeholder: true` in `src/content/site.ts` and labelled on the page:
 
-- **Photography.** Every image slot shows a gradient plus a shoot brief. Replace with `next/image` once the shoot is done.
+- **Photography.** Slots use Unsplash photos, hotlinked from Unsplash's CDN as their API guidelines require, with every photographer credited on `/credits`. Replace them with the clinic's own shoot when it exists. Before/after frames and doctor portraits deliberately stay empty: they must be real.
 - **Doctors.** Names, credentials and quotes are invented. Replace with the real team, including registration numbers.
 - **Results and testimonials.** Samples only. Use real cases only with written consent.
 - **Clinic details.** Address, phone and WhatsApp number (`clinic.whatsapp`; set it and the WhatsApp button links to `wa.me`).

@@ -46,6 +46,9 @@ export function Footer() {
                   <Link href={treatmentHref(c.slug)}>{c.title}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/salon-nails">Salon &amp; nails</Link>
+              </li>
             </ul>
           </nav>
 
@@ -109,6 +112,7 @@ export function Footer() {
               {l.label}
             </Link>
           ))}
+          <Link href="/credits">Photo credits</Link>
           <a href="/feed.xml">RSS</a>
           <a href="/sitemap.xml">Sitemap</a>
         </nav>
