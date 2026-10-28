@@ -1,0 +1,77 @@
+.card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-width: 0;
+  color: var(--color-ink);
+}
+
+/* Block-print cover: brick padma jaali on ivory, until editorial photography exists */
+.cover {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 6px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--color-ivory);
+}
+.cover i {
+  position: absolute;
+  inset: 0;
+  background: var(--motif-padma-brick) center / 112px 112px repeat;
+  opacity: 0.4;
+  transition:
+    transform 1.6s var(--ease-soft),
+    opacity 1s var(--ease-soft);
+}
+.photo {
+  transition: transform 1.6s var(--ease-soft);
+}
+
+.category {
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.title {
+  position: relative;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.15;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  transition: color 0.5s;
+}
+.excerpt {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--color-charcoal);
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+}
+
+@media (hover: hover) {
+  .card:hover .title {
+    color: var(--color-brick);
+  }
+  .card:hover .cover i {
+    transform: scale(1.05);
+    opacity: 0.55;
+  }
+  .card:hover .photo {
+    transform: scale(1.05);
+  }
+}
+.card:focus-visible .title {
+  color: var(--color-brick);
+}

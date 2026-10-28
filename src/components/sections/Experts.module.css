@@ -1,0 +1,126 @@
+.inner {
+  padding-block: 130px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Staggered heights so the row reads as editorial, not a card grid */
+.doc {
+  min-width: 0;
+}
+.doc:nth-child(2) {
+  margin-top: 88px;
+}
+.doc:nth-child(3) {
+  margin-top: 24px;
+}
+.doc h3 {
+  font-size: 32px;
+  font-weight: 400;
+}
+.doc > p:last-child {
+  font-size: 14.5px;
+  color: var(--color-charcoal);
+}
+
+.photo {
+  position: relative;
+  max-width: 100%;
+  aspect-ratio: 4 / 5.2;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 999px 999px 4px 4px;
+  background: linear-gradient(175deg, #ece0d6 0%, #d3a28c 58%, #a14a3c 100%);
+}
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(55% 35% at 50% 34%, rgb(255 238 224 / 0.42), transparent 70%);
+  transition: transform 1.4s var(--ease-soft);
+}
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--motif-padma) center top / 110px 110px repeat;
+  opacity: 0.3;
+  mask-image: linear-gradient(#000, transparent 75%);
+  transition: opacity 0.8s;
+}
+@media (hover: hover) {
+  .doc:hover .photo::before {
+    transform: scale(1.08);
+  }
+  .doc:hover .photo::after {
+    opacity: 0.12;
+  }
+  .doc:hover .quote {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(30 19 20 / 0.55);
+}
+
+/* The doctor's own words rise in on hover */
+.quote {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  padding: 26px 24px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--color-ivory);
+  background: linear-gradient(transparent, rgb(26 11 12 / 0.9));
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.8s var(--ease-soft);
+}
+.doc:focus-within .quote {
+  opacity: 1;
+  transform: none;
+}
+
+.role {
+  margin: 8px 0 12px;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+
+@media (hover: none) {
+  .quote {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .inner {
+    padding-block: 96px;
+  }
+  /* No staggered offsets inside the swipe row */
+  .doc:nth-child(n) {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,144 @@
+/* Minimal: one headline, one line of copy, two actions, one portrait. */
+.hero {
+  overflow: hidden;
+  background: var(--color-paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 80px;
+  align-items: center;
+  min-height: min(88vh, 860px);
+  min-height: min(88svh, 860px);
+  padding-block: 64px 96px;
+}
+
+.copy {
+  min-width: 0;
+}
+
+/* Each line rises out of a mask once, on load */
+.title {
+  font-size: clamp(48px, 7vw, 112px);
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: -0.045em;
+}
+.title em {
+  color: var(--em);
+}
+.line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.line > span {
+  display: block;
+  transform: translateY(110%);
+  animation: rise 1.3s var(--ease-curtain) forwards;
+}
+.line:nth-child(2) > span {
+  animation-delay: 0.12s;
+}
+@keyframes rise {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.lead,
+.actions,
+.portraitWrap {
+  opacity: 0;
+  animation: fade 1.2s var(--ease-soft) forwards;
+}
+.lead {
+  max-width: 30rem;
+  margin-top: 36px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--fg-dim);
+  animation-delay: 0.6s;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 44px;
+  animation-delay: 0.75s;
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+/* One static, faint lotus behind the arch, like a block-print stamp */
+.portraitWrap {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 460px;
+  animation-delay: 0.3s;
+}
+.lotus {
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  z-index: 0;
+  width: 150%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.portrait {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 999px 999px 4px 4px;
+  background: linear-gradient(172deg, #2b1113 0%, #6b2422 38%, #b2453b 68%, #e8785a 90%, #f2956e 100%);
+}
+.portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(56% 42% at 50% 36%, rgb(255 238 224 / 0.5), transparent 70%);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 56px;
+    min-height: 0;
+    padding-block: 40px 72px;
+  }
+  .title {
+    font-size: clamp(42px, 12vw, 88px);
+  }
+  .lead {
+    margin-top: 28px;
+    font-size: 16px;
+  }
+  .actions {
+    margin-top: 32px;
+  }
+  .portraitWrap {
+    justify-self: center;
+    max-width: 380px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line > span,
+  .lead,
+  .actions,
+  .portraitWrap {
+    transform: none;
+    opacity: 1;
+  }
+}

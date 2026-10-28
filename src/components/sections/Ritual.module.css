@@ -1,0 +1,112 @@
+/* Ivory ground with the faint pulli (kolam dot grid) */
+.section {
+  background-image: var(--motif-pulli);
+  background-size: 28px 28px;
+}
+.inner {
+  padding-block: 130px;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+.head > p {
+  max-width: 34rem;
+  font-size: 15.5px;
+  color: var(--color-charcoal);
+}
+
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding-top: 40px;
+}
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+}
+
+/* A line draws across and lotus rosettes bloom in order when the steps enter */
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-brick);
+  transform-origin: left;
+  transition: transform 2.4s var(--ease-curtain);
+}
+.steps[data-reveal="pre"] .progress {
+  transform: scaleX(0);
+}
+
+.step {
+  position: relative;
+  min-width: 0;
+}
+.step::before {
+  content: "";
+  position: absolute;
+  top: -51px;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-paper) var(--motif-rosette) center / contain no-repeat;
+  transition: transform 0.6s var(--ease-soft) calc(0.5s + var(--i, 0) * 0.5s);
+}
+.steps[data-reveal="pre"] .step::before {
+  transform: scale(0);
+}
+
+.n {
+  margin-bottom: 22px;
+  font-size: clamp(64px, 7vw, 110px);
+  line-height: 0.8;
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  color: var(--color-linen);
+}
+.step h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+  font-size: 34px;
+  font-weight: 400;
+}
+.step p {
+  max-width: 28ch;
+  margin-top: 14px;
+  font-size: 14.5px;
+  color: var(--color-charcoal);
+}
+
+@media (max-width: 1000px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .step::before {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

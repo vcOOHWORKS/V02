@@ -1,0 +1,829 @@
+/* "Our brand story": a lotus arc. Roots (ancient wisdom), Rise (technology),
+   Bloom (wellness), framed by a prologue and an epilogue. */
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.crumbs [aria-current] {
+  color: var(--color-brick);
+}
+@media (hover: hover) {
+  .crumbs a:hover {
+    color: var(--color-brick);
+  }
+}
+
+.section {
+  padding-block: 130px;
+}
+.chapterTitle {
+  margin-top: 0;
+}
+.body {
+  max-width: 36rem;
+  margin-top: 22px;
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+}
+/* Plain subheading for a list or group within a chapter */
+.blockTitle {
+  margin-bottom: 18px;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.heroLotus {
+  position: absolute;
+  right: -14vw;
+  top: 50%;
+  width: min(70vw, 860px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: 26px;
+  padding-block: 56px 112px;
+}
+.heroTitle {
+  margin-top: 28px;
+  font-size: clamp(52px, 8vw, 128px);
+  line-height: 0.98;
+  font-weight: 200;
+  letter-spacing: -0.045em;
+  animation: fadeUp 1.1s var(--ease-soft) both;
+}
+.heroTitle em {
+  display: block;
+  font-weight: 400;
+  color: var(--color-brick);
+}
+.heroLead {
+  max-width: 40rem;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--color-ink);
+  animation: fadeUp 1.1s var(--ease-soft) 0.15s both;
+}
+
+/* The three stages as an index into the arc */
+.arcList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(100%, 760px);
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  animation: fadeUp 1.1s var(--ease-soft) 0.3s both;
+}
+.arcList li + li {
+  border-left: 1px solid var(--line);
+}
+.arcList a {
+  display: grid;
+  gap: 4px;
+  padding: 20px 24px 4px;
+}
+.arcList li:first-child a {
+  padding-left: 0;
+}
+.arcNumeral {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--color-brick);
+}
+.arcName {
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  transition: color 0.3s;
+}
+.arcThread {
+  font-size: 13px;
+  color: var(--color-charcoal);
+}
+@media (hover: hover) {
+  .arcList a:hover .arcName {
+    color: var(--color-brick);
+  }
+}
+
+/* ---------- Prologue: the name ---------- */
+
+.nameGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 80px;
+  align-items: center;
+  padding-block: 130px;
+}
+.nameArt {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+.bigName {
+  font-size: clamp(140px, 20vw, 300px);
+  line-height: 0.85;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-brick);
+}
+.bigName sub {
+  position: relative;
+  bottom: -0.05em;
+  margin-left: 0.04em;
+  font-size: 0.32em;
+  font-weight: 400;
+  vertical-align: baseline;
+  color: var(--color-brick);
+  -webkit-text-stroke: 0;
+}
+.bigNameCaption {
+  margin-top: 28px;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.nameCopy {
+  min-width: 0;
+}
+.markCard {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  max-width: 36rem;
+  margin-top: 40px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: var(--color-paper);
+}
+.markImg {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+}
+.markCard h3 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.markCard p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+}
+
+/* ---------- The arc: sticky lotus + chapters ---------- */
+
+.arc {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.lotusRail {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: calc(100vh - 128px);
+  height: calc(100svh - 128px);
+  padding-block: 40px 24px;
+}
+.lotusSvg {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+.lotusSvg path {
+  transition: stroke-dashoffset 0.35s linear;
+}
+.lotusSvg circle {
+  transition: opacity 0.6s var(--ease-soft);
+}
+.lotusStages {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.lotusStages li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 8px;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--line);
+  opacity: 0.45;
+  transition: opacity 0.5s var(--ease-soft);
+}
+.lotusStages span {
+  grid-row: span 2;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.9;
+  color: var(--color-brick);
+}
+.lotusStages strong {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-ink);
+}
+.lotusStages em {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--color-charcoal);
+}
+.lotusStageOn {
+  opacity: 1 !important;
+}
+
+.chapters {
+  min-width: 0;
+}
+.chapter {
+  padding-block: 130px;
+  scroll-margin-top: 72px;
+}
+.chapter + .chapter {
+  border-top: 1px solid var(--line);
+}
+.chapterHead {
+  max-width: 48rem;
+  margin-bottom: 64px;
+}
+.stageBadge {
+  display: none;
+  margin-bottom: 18px;
+  padding: 6px 12px;
+  border: 1px solid rgb(151 48 46 / 0.25);
+  border-radius: 999px;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.chapterIntro {
+  max-width: 40rem;
+  margin-top: 24px;
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+}
+
+/* ---------- I · Roots: then, and now ---------- */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.principle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 34px 32px 30px;
+  border: 1px solid var(--line);
+  background: var(--color-ivory);
+}
+.principle::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgb(151 48 46 / 0.07);
+  pointer-events: none;
+}
+.term {
+  font-size: clamp(28px, 2.6vw, 36px);
+  line-height: 1.05;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-brick);
+}
+.termMeaning {
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+.thenNow {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 0;
+}
+.thenNow > div {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 12px;
+}
+.thenNow dt {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  line-height: 2.1;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.thenNow dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+}
+.atVo2 {
+  display: grid;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--color-ink);
+}
+.thenNow + .atVo2 {
+  margin-top: 22px;
+}
+.atVo2 span {
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+
+/* The wisdom, made visible */
+.patternsHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px 48px;
+  margin: 110px 0 36px;
+}
+.patternsTitle {
+  font-size: clamp(32px, 3.4vw, 50px);
+  line-height: 1.02;
+  font-weight: 200;
+  letter-spacing: -0.035em;
+}
+.patternsTitle em {
+  font-weight: 400;
+  color: var(--color-brick);
+}
+.patternsHead p {
+  max-width: 28rem;
+  font-size: 15px;
+  color: var(--color-charcoal);
+}
+.motifs {
+  border-top: 1px solid var(--line);
+}
+.motifRow {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+  padding-block: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.swatch {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--color-ivory);
+}
+.swatchTile {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+}
+.swatchMotif {
+  position: absolute;
+  inset: 12%;
+}
+.motifText h4 {
+  font-size: clamp(24px, 2.2vw, 30px);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+}
+.motifOrigin {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.motifHistory {
+  max-width: 40rem;
+  margin-top: 14px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+}
+.motifMeaning {
+  max-width: 40rem;
+  margin-top: 12px;
+  padding-left: 16px;
+  border-left: 1px solid var(--color-brick);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 300;
+  color: var(--color-ink);
+}
+
+/* ---------- II · Rise: technology ---------- */
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+.pillar {
+  min-width: 0;
+  padding: 34px 32px 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pillar:nth-child(even) {
+  padding: 34px 0 34px 32px;
+  border-left: 1px solid var(--line);
+}
+.pillar h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.pillar h3::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  background: var(--motif-rosette) center / contain no-repeat;
+}
+.pillar p {
+  max-width: 34ch;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+}
+.bridge {
+  margin-top: 72px;
+  font-size: clamp(26px, 3vw, 44px);
+  line-height: 1.2;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+.bridge em {
+  display: block;
+  font-weight: 400;
+  color: var(--color-brick);
+}
+
+/* ---------- III · Bloom: wellness ---------- */
+
+.bloomGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 64px;
+}
+.wholeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.wholeList li {
+  padding: 10px 18px;
+  border: 1px solid rgb(151 48 46 / 0.22);
+  border-radius: 999px;
+  background: var(--color-paper);
+  font-size: 14.5px;
+  color: var(--color-ink);
+}
+.realitiesIntro {
+  font-size: 15px;
+  color: var(--color-charcoal);
+}
+.realities {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.realities li {
+  position: relative;
+  padding: 14px 0 14px 32px;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-ink);
+}
+.realities li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 19px;
+  width: 15px;
+  height: 15px;
+  background: var(--motif-rosette) center / contain no-repeat;
+  opacity: 0.8;
+}
+.bloomClose {
+  max-width: 40rem;
+  margin-top: 64px;
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.4;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+/* ---------- Epilogue: the experience ---------- */
+
+.experience {
+  background-image: var(--motif-pulli);
+  background-size: 28px 28px;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  padding-top: 44px;
+  border-top: 1px solid var(--color-brick);
+}
+.step {
+  position: relative;
+  min-width: 0;
+}
+.step::before {
+  content: "";
+  position: absolute;
+  top: -55px;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-ivory) var(--motif-rosette) center / contain no-repeat;
+}
+.stepN {
+  display: block;
+  margin-bottom: 16px;
+  font-size: clamp(56px, 6vw, 96px);
+  line-height: 0.8;
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  color: var(--color-linen);
+}
+.stepStage {
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.step h3 {
+  margin-top: 8px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.step p:last-child {
+  max-width: 30ch;
+  margin-top: 12px;
+  font-size: 14.5px;
+  color: var(--color-charcoal);
+}
+
+/* ---------- Promise ---------- */
+
+.promises {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+  margin-top: 28px;
+}
+.promiseTitle {
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 200;
+  letter-spacing: -0.04em;
+}
+.promiseTitle em {
+  font-weight: 400;
+  color: var(--color-brick);
+}
+.always,
+.never {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.always li,
+.never li {
+  position: relative;
+  padding: 18px 0 18px 36px;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--color-ink);
+}
+.always li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 23px;
+  width: 16px;
+  height: 16px;
+  background: var(--motif-rosette) center / contain no-repeat;
+}
+.never li {
+  color: var(--color-charcoal);
+}
+.never li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background: var(--color-brick);
+}
+
+/* ---------- Closing ---------- */
+
+.closing {
+  position: relative;
+  overflow: hidden;
+}
+.closingStar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(110vw, 900px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.closingInner {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 32px;
+  padding-block: 140px;
+  text-align: center;
+}
+.closingRosette {
+  width: 32px;
+  height: 32px;
+  background: var(--motif-rosette) center / contain no-repeat;
+}
+.closingQuote {
+  max-width: 22ch;
+  font-size: clamp(32px, 4.4vw, 64px);
+  line-height: 1.15;
+  font-weight: 200;
+  letter-spacing: -0.035em;
+  color: var(--color-ink);
+  text-wrap: balance;
+}
+.closingActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .arc {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .lotusRail {
+    display: none;
+  }
+  .stageBadge {
+    display: inline-block;
+  }
+  .principles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 40px;
+  }
+  .step::before {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .section,
+  .nameGrid,
+  .chapter {
+    padding-block: 96px;
+  }
+  .nameGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .bloomGrid,
+  .promises {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .motifRow {
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 28px;
+  }
+  .closingInner {
+    padding-block: 104px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroInner {
+    padding-block: 40px 88px;
+  }
+  .arcList a {
+    padding: 16px 12px 4px;
+  }
+  .arcName {
+    font-size: 21px;
+  }
+  .arcThread {
+    font-size: 12px;
+  }
+  .principle {
+    padding: 28px 22px 24px;
+  }
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pillar,
+  .pillar:nth-child(even) {
+    padding: 28px 0;
+    border-left: 0;
+  }
+  .motifRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .swatch {
+    max-width: 200px;
+  }
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .markCard {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .chapterHead {
+    margin-bottom: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroTitle,
+  .heroLead,
+  .arcList {
+    animation: none;
+  }
+  .lotusSvg path {
+    transition: none;
+  }
+}

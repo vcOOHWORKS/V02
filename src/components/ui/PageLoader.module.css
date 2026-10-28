@@ -1,0 +1,70 @@
+/* Route loader: a lotus that draws itself, centred in the page area */
+.loader {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  /* Fill the screen below the nav, so the footer stays out of view while loading */
+  min-height: calc(100vh - 80px);
+  min-height: calc(100svh - 80px);
+  padding: 80px 16px;
+  animation: appear 0.4s var(--ease-soft) 0.15s both; /* skip a flash on very fast loads */
+}
+.svg {
+  display: block;
+  width: 72px;
+  height: 72px;
+  overflow: visible;
+}
+.petal {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 2.2s var(--ease-soft) infinite;
+}
+.bindu {
+  animation: pulse 2.2s ease-in-out infinite;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0.2;
+  }
+  45%,
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Reduced motion: a still, fully drawn lotus */
+@media (prefers-reduced-motion: reduce) {
+  .loader,
+  .petal,
+  .bindu {
+    animation: none;
+  }
+  .petal {
+    stroke-dashoffset: 0;
+  }
+}

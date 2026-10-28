@@ -1,0 +1,499 @@
+/* About us + Branches */
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.crumbs [aria-current] {
+  color: var(--color-brick);
+}
+@media (hover: hover) {
+  .crumbs a:hover {
+    color: var(--color-brick);
+  }
+}
+
+.section {
+  padding-block: 130px;
+}
+
+.rosette {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: var(--motif-rosette) center / contain no-repeat;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.heroArt {
+  position: absolute;
+  right: -12vw;
+  top: 50%;
+  width: min(64vw, 780px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  padding-block: 56px 112px;
+}
+.title {
+  margin-top: 28px;
+  max-width: 15ch;
+  font-size: clamp(48px, 7vw, 112px);
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: -0.045em;
+  animation: fadeUp 1.1s var(--ease-soft) both;
+}
+.title em {
+  display: block;
+  font-weight: 400;
+  color: var(--color-brick);
+}
+.lead {
+  max-width: 40rem;
+  font-size: clamp(17px, 1.5vw, 19px);
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--color-ink);
+  animation: fadeUp 1.1s var(--ease-soft) 0.15s both;
+}
+
+/* ---------- About: at a glance ---------- */
+
+.glance {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding-block: 48px;
+}
+.glance > div {
+  padding: 4px 28px;
+  border-left: 1px solid var(--line);
+}
+.glance > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.glance dt {
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.glance dd {
+  margin: 10px 0 0;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+}
+
+/* ---------- About: principles ---------- */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.principle {
+  min-width: 0;
+  padding: 40px 40px 0 0;
+  margin-right: 40px;
+  border-right: 1px solid var(--line);
+}
+.principle:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+.principle h3 {
+  margin-top: 22px;
+  font-size: 28px;
+  font-weight: 400;
+}
+.principle p {
+  max-width: 32ch;
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--color-charcoal);
+}
+
+/* ---------- About: standards ---------- */
+
+.standards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.standard {
+  position: relative;
+  padding: 32px 30px 30px;
+  border: 1px solid var(--line);
+  background: var(--color-paper);
+}
+.standard::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgb(151 48 46 / 0.07);
+  pointer-events: none;
+}
+.standard h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.standard h3::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  background: var(--motif-rosette) center / contain no-repeat;
+}
+.standard p {
+  margin-top: 12px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+}
+
+/* ---------- About: onward links ---------- */
+
+.onward {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding-block: 110px;
+}
+.onwardCard {
+  position: relative;
+  display: grid;
+  align-content: end;
+  gap: 12px;
+  min-height: 260px;
+  padding: 40px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--color-paper);
+}
+.onwardArt {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 220px;
+  height: 220px;
+  opacity: 0.5;
+  transition:
+    transform 1.2s var(--ease-soft),
+    opacity 0.6s;
+}
+.onwardLabel {
+  position: relative;
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.onwardTitle {
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 10px;
+  max-width: 20ch;
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 1.15;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+.onwardTitle em {
+  font-weight: 400;
+  color: var(--color-brick);
+}
+@media (hover: hover) {
+  .onwardCard:hover .onwardArt {
+    transform: rotate(12deg) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* ---------- Branches: clinic card ---------- */
+
+.branch {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 72px;
+  align-items: start;
+}
+.branchMedia {
+  position: sticky;
+  top: 110px;
+}
+.branchArch {
+  position: relative;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 999px 999px 4px 4px;
+}
+.branchArt {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 70%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+.branchBody {
+  min-width: 0;
+  padding-top: 12px;
+}
+.branchLabel {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.branchName {
+  margin-top: 14px;
+  font-size: clamp(40px, 4.6vw, 68px);
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: -0.04em;
+}
+.branchDetails {
+  margin: 36px 0 0;
+  border-top: 1px solid var(--line);
+}
+.branchDetails > div {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 20px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.branchDetails dt {
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  line-height: 2.2;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.branchDetails dd {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-ink);
+}
+.branchDetails a {
+  border-bottom: 1px solid var(--color-brick);
+}
+.branchActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+.branchServicesLabel {
+  margin-top: 48px;
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.branchServices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.branchServices a {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid rgb(151 48 46 / 0.22);
+  border-radius: 999px;
+  background: var(--color-paper);
+  font-size: 13.5px;
+  color: var(--color-ink);
+  transition: border-color 0.3s;
+}
+@media (hover: hover) {
+  .branchServices a:hover {
+    border-color: var(--color-brick);
+  }
+}
+
+/* ---------- Branches: planning a visit ---------- */
+
+.visit {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.visitStep {
+  min-width: 0;
+  padding: 40px 40px 0 0;
+  margin-right: 40px;
+  border-right: 1px solid var(--line);
+}
+.visitStep:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+.visitStep h3 {
+  margin-top: 22px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.visitStep p {
+  max-width: 34ch;
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--color-charcoal);
+}
+
+/* ---------- Branches: more cities ---------- */
+
+.cities {
+  display: grid;
+  justify-items: center;
+  gap: 22px;
+  padding-block: 110px;
+  text-align: center;
+}
+.citiesKolam {
+  width: min(100%, 288px);
+  height: 24px;
+  background: var(--motif-kolam-brick) center / 48px 24px repeat-x;
+  opacity: 0.55;
+}
+.citiesTitle {
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 200;
+  letter-spacing: -0.035em;
+}
+.citiesTitle em {
+  font-weight: 400;
+  color: var(--color-brick);
+}
+.citiesText {
+  max-width: 34rem;
+  font-size: 16px;
+  color: var(--color-charcoal);
+}
+.citiesText a {
+  border-bottom: 1px solid var(--color-brick);
+  color: var(--color-ink);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .glance {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+  .glance > div:nth-child(4) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .standards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding-block: 96px;
+  }
+  .principles,
+  .visit {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .principle,
+  .visitStep {
+    margin-right: 0;
+    padding: 28px 0 0;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+  .principle:first-child,
+  .visitStep:first-child {
+    border-top: 0;
+  }
+  .branch {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .branchMedia {
+    position: static;
+    max-width: 400px;
+  }
+  .onward {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 88px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroInner {
+    padding-block: 40px 80px;
+  }
+  .glance {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .glance > div {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .standards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .branchDetails > div {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .onwardCard {
+    min-height: 220px;
+    padding: 30px 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title,
+  .lead {
+    animation: none;
+  }
+}

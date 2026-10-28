@@ -1,0 +1,521 @@
+.nav {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 30;
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.6s var(--ease-soft),
+    border-color 0.6s var(--ease-soft);
+}
+
+.solid {
+  background: rgb(252 250 248 / 0.94);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+  border-color: var(--line);
+}
+
+/* Static so the treatments mega menu anchors to the full-width header */
+.inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding-block: 22px;
+  transition: padding 0.6s var(--ease-soft);
+}
+.solid .inner {
+  padding-block: 12px;
+}
+
+.logo {
+  justify-self: start;
+  display: inline-flex;
+}
+
+/* ---------- Desktop links ---------- */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.link,
+.trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  white-space: nowrap;
+  transition: color 0.4s;
+}
+.trigger {
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.link::after,
+.trigger::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: var(--color-brick);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s var(--ease-curtain);
+}
+.trigger[aria-expanded="true"],
+.current {
+  color: var(--fg);
+}
+.trigger[aria-expanded="true"]::after,
+.current::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media (hover: hover) {
+  .link:hover,
+  .trigger:hover {
+    color: var(--fg);
+  }
+  .link:hover::after,
+  .trigger:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.chevron {
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition:
+    transform 0.4s var(--ease-soft),
+    margin 0.4s var(--ease-soft);
+}
+.chevronOpen {
+  margin-top: 3px;
+  transform: rotate(-135deg);
+}
+
+/* ---------- Treatments mega menu: a full-width panel under the bar ---------- */
+
+.menuItem {
+  position: static;
+}
+.mega {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: calc(100vh - 80px);
+  max-height: calc(100svh - 80px);
+  overflow-y: auto;
+  background: var(--color-paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 40px 70px -40px rgb(30 19 20 / 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.35s var(--ease-soft),
+    transform 0.5s var(--ease-soft),
+    visibility 0s linear 0.5s;
+}
+/* Invisible bridge so the cursor can travel from the trigger to the panel */
+.mega::before {
+  content: "";
+  position: absolute;
+  inset: -24px 0 100% 0;
+}
+.megaOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.35s var(--ease-soft),
+    transform 0.5s var(--ease-soft),
+    visibility 0s;
+}
+.megaInner {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 56px;
+  padding-block: 44px 52px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.megaIntro {
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  border-right: 1px solid var(--line);
+}
+.megaHeading {
+  font-size: 32px;
+  line-height: 1.08;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+.megaHeading em {
+  display: block;
+  font-weight: 400;
+  color: var(--color-brick);
+}
+.megaText {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-charcoal);
+}
+.megaLinks {
+  display: grid;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 28px;
+}
+.megaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+.megaLink::after {
+  content: "→";
+  transition: transform 0.5s var(--ease-soft);
+}
+@media (hover: hover) {
+  .megaLink:hover::after {
+    transform: translateX(5px);
+  }
+}
+
+.megaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+.tile {
+  display: grid;
+  gap: 4px;
+}
+/* Small jharokha arch */
+.tileImage {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 11;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 140px 140px 4px 4px / 100px 100px 4px 4px;
+}
+.tilePhoto {
+  transition: transform 1.2s var(--ease-soft);
+}
+.tileTitle {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  transition: color 0.3s;
+}
+.tileKeywords {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--color-charcoal);
+}
+@media (hover: hover) {
+  .tile:hover .tilePhoto {
+    transform: scale(1.06);
+  }
+  .tile:hover .tileTitle {
+    color: var(--color-brick);
+  }
+}
+.tile:focus-visible .tileTitle {
+  color: var(--color-brick);
+}
+
+/* ---------- Right side ---------- */
+
+.right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.city {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.cta {
+  padding: 12px 22px;
+  font-size: 10.5px;
+}
+
+/* Menu toggle: two hairlines that cross into an X */
+.toggle {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--color-ink);
+}
+.toggle span {
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  height: 1.5px;
+  background: currentColor;
+  transition:
+    transform 0.5s var(--ease-soft),
+    top 0.5s var(--ease-soft);
+}
+.toggle span:first-child {
+  top: 17px;
+}
+.toggle span:last-child {
+  top: 25px;
+}
+.toggleOpen span:first-child {
+  top: 21px;
+  transform: rotate(45deg);
+}
+.toggleOpen span:last-child {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+
+/* ---------- Full-screen mobile menu on paper ---------- */
+
+.panel {
+  position: fixed;
+  inset: 0;
+  z-index: 29;
+  display: flex;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--color-paper);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition:
+    opacity 0.45s var(--ease-soft),
+    transform 0.6s var(--ease-soft),
+    visibility 0s linear 0.6s;
+}
+.panelOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.45s var(--ease-soft),
+    transform 0.6s var(--ease-soft),
+    visibility 0s;
+}
+.panelArt {
+  position: absolute;
+  right: -30%;
+  bottom: -18%;
+  width: 95%;
+  max-width: 560px;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+.panelInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 110px);
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 48px);
+}
+.panelInner > nav {
+  align-self: stretch;
+}
+.panelLinks {
+  width: 100%;
+  border-top: 1px solid var(--line);
+}
+.panelLinks > li > a,
+.panelToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 18px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  font-size: clamp(28px, 7vw, 40px);
+  line-height: 1.1;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.panelLinks a:active,
+.panelToggle:active {
+  color: var(--color-brick);
+}
+
+/* Plus that turns into a minus */
+.plus {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-brick);
+  transition: transform 0.4s var(--ease-soft);
+}
+.plus::after {
+  transform: rotate(90deg);
+}
+.plusOpen::after {
+  transform: rotate(0deg);
+}
+
+/* Treatments sub-list: one grid row animates 0fr → 1fr; the inner list clips while collapsed */
+.panelSub {
+  display: grid;
+  grid-template-rows: 0fr;
+  border-bottom: 1px solid transparent;
+  transition:
+    grid-template-rows 0.5s var(--ease-soft),
+    border-color 0.5s var(--ease-soft);
+}
+.panelSubInner {
+  min-height: 0;
+  overflow: hidden;
+}
+.panelSubInner > li:first-child {
+  padding-top: 10px;
+}
+.panelSubInner > li:last-child {
+  padding-bottom: 16px;
+}
+.panelSubOpen {
+  grid-template-rows: 1fr;
+  border-bottom-color: var(--line);
+}
+.panelSub a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 7px 0 7px 2px;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--color-charcoal);
+}
+.subThumb {
+  position: relative;
+  flex: none;
+  width: 38px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 999px 999px 3px 3px;
+}
+.panelSubAll {
+  font-size: 11px !important;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick) !important;
+}
+
+.panelMeta {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+/* ---------- Breakpoints ---------- */
+
+@media (max-width: 1200px) {
+  .city {
+    display: none;
+  }
+  .menu {
+    gap: 30px;
+  }
+  .megaInner {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 36px;
+  }
+  .megaIntro {
+    padding-right: 28px;
+  }
+  .megaHeading {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+  .right {
+    gap: 14px;
+  }
+  .inner {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 380px) {
+  .cta {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .panel {
+    display: none;
+  }
+}

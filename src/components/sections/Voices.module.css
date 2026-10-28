@@ -1,0 +1,125 @@
+.inner {
+  padding-block: 140px;
+}
+
+/* One featured story beside two shorter ones; every story is readable at once */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+
+/* Paper panel with a fine double rule, like a sari border */
+.story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 44px 40px 40px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-paper);
+  border: 1px solid var(--line);
+}
+.story::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  z-index: -1;
+  border: 1px solid rgb(151 48 46 / 0.09);
+  pointer-events: none;
+}
+
+.featured {
+  grid-row: 1 / span 2;
+  justify-content: space-between;
+  padding: 64px 56px 56px;
+}
+
+/* A faint Hoysala star, cropped into the corner of the featured panel */
+.star {
+  position: absolute;
+  right: -22%;
+  bottom: -30%;
+  z-index: -1;
+  width: 78%;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+/* Lotus rosette in place of quotation marks */
+.rosette {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: var(--motif-rosette) center / contain no-repeat;
+  opacity: 0.85;
+}
+
+.quote {
+  margin: 26px 0 0;
+  font-size: 19px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+.featured .quote {
+  max-width: 24ch;
+  margin-top: 36px;
+  font-size: clamp(26px, 2.5vw, 38px);
+  line-height: 1.28;
+  font-weight: 200;
+  letter-spacing: -0.025em;
+}
+
+.caption {
+  display: grid;
+  gap: 6px;
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.featured .caption {
+  margin-top: 56px;
+  max-width: 24rem;
+}
+.name {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+.meta {
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    padding-block: 96px;
+  }
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .featured {
+    grid-row: auto;
+    padding: 44px 32px 36px;
+  }
+  .story {
+    padding: 36px 28px 32px;
+  }
+  .featured .caption {
+    margin-top: 40px;
+  }
+  .star {
+    right: -30%;
+    bottom: -24%;
+    width: 90%;
+  }
+}
