@@ -1,0 +1,450 @@
+{
+  "demo-skin-1-before": {
+    "id": "mOggZePHVAw",
+    "raw": "https://images.unsplash.com/photo-1646770437585-daea33227842?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTB8fHdvbWFuJTIwZmFjZSUyMHNraW4lMjBjbG9zZXVwfGVufDF8MXx8fDE3OTMxODk0ODl8MA&ixlib=rb-4.1.0",
+    "width": 2246,
+    "height": 2808,
+    "color": "#c08c73",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Bernadett Grega",
+      "profile": "https://unsplash.com/@nadett",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-person-holding-a-flower-mOggZePHVAw"
+    }
+  },
+  "demo-skin-1-after": {
+    "id": "8IWjJCcHNR4",
+    "raw": "https://images.unsplash.com/photo-1653507770647-62b4c87d9796?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Nnx8d29tYW4lMjBmYWNlJTIwc2tpbiUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ4OXww&ixlib=rb-4.1.0",
+    "width": 2008,
+    "height": 3008,
+    "color": "#c0a6a6",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Frank Flores",
+      "profile": "https://unsplash.com/@frankflores",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-person-with-a-cell-phone-8IWjJCcHNR4"
+    }
+  },
+  "demo-skin-2-before": {
+    "id": "S5Gipx7uMCU",
+    "raw": "https://images.unsplash.com/photo-1752245818739-890854ca3b81?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8d29tYW4lMjBmYWNlJTIwc2tpbiUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ4OXww&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#8c7373",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "bahareh moradian",
+      "profile": "https://unsplash.com/@bahar_mr",
+      "page": "https://unsplash.com/photos/a-woman-with-freckles-and-her-hand-on-her-lips-S5Gipx7uMCU"
+    }
+  },
+  "demo-skin-2-after": {
+    "id": "4p6XsMzkTsE",
+    "raw": "https://images.unsplash.com/photo-1637851497145-0faa2e456081?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8d29tYW4lMjBmYWNlJTIwc2tpbiUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ4OXww&ixlib=rb-4.1.0",
+    "width": 3600,
+    "height": 5408,
+    "color": "#c0c0d9",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Reece van der Merwe",
+      "profile": "https://unsplash.com/@reecevandermerwe",
+      "page": "https://unsplash.com/photos/a-woman-with-freckles-on-her-face-and-neck-4p6XsMzkTsE"
+    }
+  },
+  "demo-medi-facials-1-before": {
+    "id": "e7jpGYe7OtU",
+    "raw": "https://images.unsplash.com/photo-1581182815808-b6eb627a8798?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8Z2xvd2luZyUyMHNraW4lMjB3b21hbiUyMGZhY2UlMjBjbG9zZXVwfGVufDF8MXx8fDE3OTMxODk0OTB8MA&ixlib=rb-4.1.0",
+    "width": 3205,
+    "height": 4000,
+    "color": "#c07359",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Fleur Kaan",
+      "profile": "https://unsplash.com/@fleuraimeekaan",
+      "page": "https://unsplash.com/photos/close-portrait-of-woman-with-bokeh-e7jpGYe7OtU"
+    }
+  },
+  "demo-medi-facials-1-after": {
+    "id": "39GcuxM6ehA",
+    "raw": "https://images.unsplash.com/photo-1611594547712-9e5d7da58684?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8OHx8Z2xvd2luZyUyMHNraW4lMjB3b21hbiUyMGZhY2UlMjBjbG9zZXVwfGVufDF8MXx8fDE3OTMxODk0OTB8MA&ixlib=rb-4.1.0",
+    "width": 6539,
+    "height": 9837,
+    "color": "#404040",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "see plus",
+      "profile": "https://unsplash.com/@seeplus",
+      "page": "https://unsplash.com/photos/woman-with-brown-hair-and-pink-lipstick-39GcuxM6ehA"
+    }
+  },
+  "demo-medi-facials-2-before": {
+    "id": "b2bXKspL5MY",
+    "raw": "https://images.unsplash.com/photo-1551184451-76b762941ad6?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8Z2xvd2luZyUyMHNraW4lMjB3b21hbiUyMGZhY2UlMjBjbG9zZXVwfGVufDF8MXx8fDE3OTMxODk0OTB8MA&ixlib=rb-4.1.0",
+    "width": 3128,
+    "height": 4693,
+    "color": "#8c5940",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Kamila Maciejewska",
+      "profile": "https://unsplash.com/@the_change_designer",
+      "page": "https://unsplash.com/photos/portrait-of-woman-face-b2bXKspL5MY"
+    }
+  },
+  "demo-medi-facials-2-after": {
+    "id": "T5AAr_PfdRA",
+    "raw": "https://images.unsplash.com/photo-1542131597-a4390333d136?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8Z2xvd2luZyUyMHNraW4lMjB3b21hbiUyMGZhY2UlMjBjbG9zZXVwfGVufDF8MXx8fDE3OTMxODk0OTB8MA&ixlib=rb-4.1.0",
+    "width": 3456,
+    "height": 5184,
+    "color": "#59260c",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Hichem Dahmani",
+      "profile": "https://unsplash.com/@iiced",
+      "page": "https://unsplash.com/photos/womans-left-eye-T5AAr_PfdRA"
+    }
+  },
+  "demo-laser-1-before": {
+    "id": "7m_jsxQRqoI",
+    "raw": "https://images.unsplash.com/photo-1732993486279-9d0f3b91adb2?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8c21vb3RoJTIwc2tpbiUyMHdvbWFuJTIwc2hvdWxkZXJ8ZW58MXwxfHx8MTc5MzE4OTQ5MHww&ixlib=rb-4.1.0",
+    "width": 3456,
+    "height": 5184,
+    "color": "#594026",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Sam Badmaeva",
+      "profile": "https://unsplash.com/@sam_badmaeva",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-woman-with-freckles-on-her-arm-7m_jsxQRqoI"
+    }
+  },
+  "demo-laser-1-after": {
+    "id": "gRLQ-FlLRbc",
+    "raw": "https://images.unsplash.com/photo-1573717006351-efb4bc9ad144?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Nnx8c21vb3RoJTIwc2tpbiUyMHdvbWFuJTIwc2hvdWxkZXJ8ZW58MXwxfHx8MTc5MzE4OTQ5MHww&ixlib=rb-4.1.0",
+    "width": 3648,
+    "height": 5472,
+    "color": "#262626",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Klara Kulikova",
+      "profile": "https://unsplash.com/@kkalerry",
+      "page": "https://unsplash.com/photos/womans-brown-hair-gRLQ-FlLRbc"
+    }
+  },
+  "demo-laser-2-before": {
+    "id": "DdPvyjLOeyA",
+    "raw": "https://images.unsplash.com/photo-1609542499975-4ca8bde933db?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8c21vb3RoJTIwc2tpbiUyMHdvbWFuJTIwc2hvdWxkZXJ8ZW58MXwxfHx8MTc5MzE4OTQ5MHww&ixlib=rb-4.1.0",
+    "width": 3024,
+    "height": 4032,
+    "color": "#8c7359",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Valeria Smirnova",
+      "profile": "https://unsplash.com/@smirnovalery",
+      "page": "https://unsplash.com/photos/topless-woman-with-brown-hair-DdPvyjLOeyA"
+    }
+  },
+  "demo-laser-2-after": {
+    "id": "vnxU7n4HMi0",
+    "raw": "https://images.unsplash.com/photo-1702312687180-617eeeea9228?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTN8fHNtb290aCUyMHNraW4lMjB3b21hbiUyMHNob3VsZGVyfGVufDF8MXx8fDE3OTMxODk0OTB8MA&ixlib=rb-4.1.0",
+    "width": 2589,
+    "height": 3884,
+    "color": "#a6a6a6",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "PLANTADEA",
+      "profile": "https://unsplash.com/@plantadea",
+      "page": "https://unsplash.com/photos/a-woman-with-a-towel-on-her-head-is-shaving-her-face-vnxU7n4HMi0"
+    }
+  },
+  "demo-hair-1-before": {
+    "id": "iEEsUxKHNjw",
+    "raw": "https://images.unsplash.com/photo-1567962235026-29b6079fec93?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8d29tYW4lMjBoYWlyJTIwY2xvc2V1cHxlbnwxfDF8fHwxNzkzMTg5NDkxfDA&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#262626",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Frank Albrecht",
+      "profile": "https://unsplash.com/@shotaspot",
+      "page": "https://unsplash.com/photos/grayscale-photography-of-womans-face-iEEsUxKHNjw"
+    }
+  },
+  "demo-hair-1-after": {
+    "id": "0-ntnQI3NUc",
+    "raw": "https://images.unsplash.com/photo-1584531910632-0c55032af6d8?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTJ8fHdvbWFuJTIwaGFpciUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ5MXww&ixlib=rb-4.1.0",
+    "width": 3261,
+    "height": 4599,
+    "color": "#260c0c",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "omid armin",
+      "profile": "https://unsplash.com/@itsomidarmin",
+      "page": "https://unsplash.com/photos/woman-with-blue-eyes-and-brown-hair-0-ntnQI3NUc"
+    }
+  },
+  "demo-hair-2-before": {
+    "id": "MpIBKQkauHA",
+    "raw": "https://images.unsplash.com/photo-1584081097601-315e1d45a017?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MXx8d29tYW4lMjBoYWlyJTIwY2xvc2V1cHxlbnwxfDF8fHwxNzkzMTg5NDkxfDA&ixlib=rb-4.1.0",
+    "width": 3456,
+    "height": 5184,
+    "color": "#264040",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Vivek Doshi",
+      "profile": "https://unsplash.com/@wildandbeyondbyvivek",
+      "page": "https://unsplash.com/photos/woman-in-white-and-blue-shirt-with-red-lipstick-MpIBKQkauHA"
+    }
+  },
+  "demo-hair-2-after": {
+    "id": "a7itXABwl8U",
+    "raw": "https://images.unsplash.com/photo-1595218841793-d38b949402d2?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8d29tYW4lMjBoYWlyJTIwY2xvc2V1cHxlbnwxfDF8fHwxNzkzMTg5NDkxfDA&ixlib=rb-4.1.0",
+    "width": 2893,
+    "height": 4146,
+    "color": "#0c2626",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "omid armin",
+      "profile": "https://unsplash.com/@itsomidarmin",
+      "page": "https://unsplash.com/photos/woman-with-blonde-hair-smiling-a7itXABwl8U"
+    }
+  },
+  "demo-non-surgical-aesthetics-1-before": {
+    "id": "ks7b752oXhw",
+    "raw": "https://images.unsplash.com/photo-1591618227088-69884e1cbb91?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8OXx8d29tYW4lMjBmYWNlJTIwcHJvZmlsZSUyMGphd2xpbmV8ZW58MXwxfHx8MTc5MzE4OTQ5MXww&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#d9d9d9",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Alexander Krivitskiy",
+      "profile": "https://unsplash.com/@krivitskiy",
+      "page": "https://unsplash.com/photos/grayscale-photo-of-womans-face-ks7b752oXhw"
+    }
+  },
+  "demo-non-surgical-aesthetics-1-after": {
+    "id": "Cdw0oTj90_8",
+    "raw": "https://images.unsplash.com/photo-1618068575849-028ac1b73074?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTR8fHdvbWFuJTIwZmFjZSUyMHByb2ZpbGUlMjBqYXdsaW5lfGVufDF8MXx8fDE3OTMxODk0OTF8MA&ixlib=rb-4.1.0",
+    "width": 4493,
+    "height": 6000,
+    "color": "#a6a6a6",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Alexander Krivitskiy",
+      "profile": "https://unsplash.com/@krivitskiy",
+      "page": "https://unsplash.com/photos/woman-with-pink-hair-and-white-wall-Cdw0oTj90_8"
+    }
+  },
+  "demo-non-surgical-aesthetics-2-before": {
+    "id": "11wyfUbiiEQ",
+    "raw": "https://images.unsplash.com/photo-1637722883499-7782c2a64f07?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8d29tYW4lMjBmYWNlJTIwcHJvZmlsZSUyMGphd2xpbmV8ZW58MXwxfHx8MTc5MzE4OTQ5MXww&ixlib=rb-4.1.0",
+    "width": 5304,
+    "height": 7952,
+    "color": "#a68c73",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Elise Wilcox",
+      "profile": "https://unsplash.com/@elise_outside",
+      "page": "https://unsplash.com/photos/a-woman-with-freckled-hair-and-blue-eyes-11wyfUbiiEQ"
+    }
+  },
+  "demo-non-surgical-aesthetics-2-after": {
+    "id": "0fBlciTWgxg",
+    "raw": "https://images.unsplash.com/photo-1779406273144-c44bd8f21c8d?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTN8fHdvbWFuJTIwZmFjZSUyMHByb2ZpbGUlMjBqYXdsaW5lfGVufDF8MXx8fDE3OTMxODk0OTF8MA&ixlib=rb-4.1.0",
+    "width": 2064,
+    "height": 3093,
+    "color": "#264040",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "ola szkolda",
+      "profile": "https://unsplash.com/@olaszkolda",
+      "page": "https://unsplash.com/photos/womans-profile-partially-obscured-by-dark-fabric-0fBlciTWgxg"
+    }
+  },
+  "demo-permanent-makeup-1-before": {
+    "id": "-AXzdbotjKI",
+    "raw": "https://images.unsplash.com/photo-1612864271882-5107e9e3b0ce?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Nnx8ZXllYnJvdyUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ5Mnww&ixlib=rb-4.1.0",
+    "width": 3136,
+    "height": 4188,
+    "color": "#d9d9d9",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "engin akyurt",
+      "profile": "https://unsplash.com/@enginakyurt",
+      "page": "https://unsplash.com/photos/persons-blue-eyes-in-close-up-photography--AXzdbotjKI"
+    }
+  },
+  "demo-permanent-makeup-1-after": {
+    "id": "ssj5l0bkYDw",
+    "raw": "https://images.unsplash.com/photo-1650066464038-318a70bd0901?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8ZXllYnJvdyUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ5Mnww&ixlib=rb-4.1.0",
+    "width": 3750,
+    "height": 4968,
+    "color": "#8c5940",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Tony Litvyak",
+      "profile": "https://unsplash.com/@justatony",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-persons-blue-eye-ssj5l0bkYDw"
+    }
+  },
+  "demo-permanent-makeup-2-before": {
+    "id": "FTMPYMNw_zQ",
+    "raw": "https://images.unsplash.com/photo-1633276115947-8d35f394a309?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8ZXllYnJvdyUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ5Mnww&ixlib=rb-4.1.0",
+    "width": 3000,
+    "height": 4498,
+    "color": "#a68c73",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Camille Brodard",
+      "profile": "https://unsplash.com/@kmile_ch",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-womans-eye-with-glitter-on-it-FTMPYMNw_zQ"
+    }
+  },
+  "demo-permanent-makeup-2-after": {
+    "id": "7tz7I7naQ8c",
+    "raw": "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8ZXllYnJvdyUyMGNsb3NldXB8ZW58MXwxfHx8MTc5MzE4OTQ5Mnww&ixlib=rb-4.1.0",
+    "width": 4480,
+    "height": 6720,
+    "color": "#d9c0a6",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Taylor Heery",
+      "profile": "https://unsplash.com/@taylorheeryphoto",
+      "page": "https://unsplash.com/photos/woman-with-red-lipstick-and-black-mascara-7tz7I7naQ8c"
+    }
+  },
+  "demo-body-1-before": {
+    "id": "TcUfF24fUMY",
+    "raw": "https://images.unsplash.com/photo-1615997380705-504484cd99c4?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NXx8d29tYW4lMjBiYWNrJTIwc2tpbnxlbnwxfDF8fHwxNzkzMTg5NDkzfDA&ixlib=rb-4.1.0",
+    "width": 3350,
+    "height": 5025,
+    "color": "#d9d9d9",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Klara Kulikova",
+      "profile": "https://unsplash.com/@kkalerry",
+      "page": "https://unsplash.com/photos/person-touching-neck-with-blonde-hair-TcUfF24fUMY"
+    }
+  },
+  "demo-body-1-after": {
+    "id": "ICxbglsycAQ",
+    "raw": "https://images.unsplash.com/photo-1605698686605-0e2e567d9a78?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8OHx8d29tYW4lMjBiYWNrJTIwc2tpbnxlbnwxfDF8fHwxNzkzMTg5NDkzfDA&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#d9d9d9",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Serafima Lazarenko",
+      "profile": "https://unsplash.com/@sera_fima",
+      "page": "https://unsplash.com/photos/woman-in-white-spaghetti-strap-top-ICxbglsycAQ"
+    }
+  },
+  "demo-body-2-before": {
+    "id": "AMPQP0OPJTE",
+    "raw": "https://images.unsplash.com/photo-1654781350550-0dc72ecb6fae?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8d29tYW4lMjBiYWNrJTIwc2tpbnxlbnwxfDF8fHwxNzkzMTg5NDkzfDA&ixlib=rb-4.1.0",
+    "width": 3744,
+    "height": 5461,
+    "color": "#d98c59",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Wilhelm Gunkel",
+      "profile": "https://unsplash.com/@wilhelmgunkel",
+      "page": "https://unsplash.com/photos/sweaty-back-with-dark-hair-AMPQP0OPJTE"
+    }
+  },
+  "demo-body-2-after": {
+    "id": "oq-T7cKCAEk",
+    "raw": "https://images.unsplash.com/photo-1661850398287-dbab87bae27b?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8N3x8d29tYW4lMjBiYWNrJTIwc2tpbnxlbnwxfDF8fHwxNzkzMTg5NDkzfDA&ixlib=rb-4.1.0",
+    "width": 3648,
+    "height": 5472,
+    "color": "#402626",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Klara Kulikova",
+      "profile": "https://unsplash.com/@kkalerry",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-persons-skin-oq-T7cKCAEk"
+    }
+  },
+  "demo-advanced-1-before": {
+    "id": "oifclaPX5oM",
+    "raw": "https://images.unsplash.com/photo-1533933269825-da140ad3132f?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8bmF0dXJhbCUyMHNraW4lMjB0ZXh0dXJlJTIwd29tYW4lMjBwb3J0cmFpdHxlbnwxfDF8fHwxNzkzMTg5NDkzfDA&ixlib=rb-4.1.0",
+    "width": 3499,
+    "height": 5249,
+    "color": "#f3d9d9",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "Matt Reiter",
+      "profile": "https://unsplash.com/@maeteu",
+      "page": "https://unsplash.com/photos/grayscale-photo-of-topless-woman-oifclaPX5oM"
+    }
+  },
+  "demo-advanced-1-after": {
+    "id": "YhMFYJZgMA0",
+    "raw": "https://images.unsplash.com/photo-1674932668403-33398b81c92f?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8bmF0dXJhbCUyMHNraW4lMjB0ZXh0dXJlJTIwd29tYW4lMjBwb3J0cmFpdHxlbnwxfDF8fHwxNzkzMTg5NDkzfDA&ixlib=rb-4.1.0",
+    "width": 5504,
+    "height": 8256,
+    "color": "#262626",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Yoad Shejtman",
+      "profile": "https://unsplash.com/@yoadsh",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-woman-with-a-ponytail-YhMFYJZgMA0"
+    }
+  },
+  "demo-advanced-2-before": {
+    "id": "cC2TKDf21jY",
+    "raw": "https://images.unsplash.com/photo-1651534400411-eaf227f82ee4?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTB8fG5hdHVyYWwlMjBza2luJTIwdGV4dHVyZSUyMHdvbWFuJTIwcG9ydHJhaXR8ZW58MXwxfHx8MTc5MzE4OTQ5M3ww&ixlib=rb-4.1.0",
+    "width": 7375,
+    "height": 9504,
+    "color": "#404040",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for a before photo (demo, not a patient result)",
+    "credit": {
+      "name": "see plus",
+      "profile": "https://unsplash.com/@seeplus",
+      "page": "https://unsplash.com/photos/a-person-with-no-shirt-cC2TKDf21jY"
+    }
+  },
+  "demo-advanced-2-after": {
+    "id": "AmLDjIBAEG8",
+    "raw": "https://images.unsplash.com/photo-1765607476376-9574ea76b2ee?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTR8fG5hdHVyYWwlMjBza2luJTIwdGV4dHVyZSUyMHdvbWFuJTIwcG9ydHJhaXR8ZW58MXwxfHx8MTc5MzE4OTQ5M3ww&ixlib=rb-4.1.0",
+    "width": 3322,
+    "height": 4153,
+    "color": "#402626",
+    "position": "center 35%",
+    "alt": "Stock photo standing in for an after photo (demo, not a patient result)",
+    "credit": {
+      "name": "Eze Joseph",
+      "profile": "https://unsplash.com/@justbeingblythe",
+      "page": "https://unsplash.com/photos/a-young-black-woman-with-short-hair-gazes-thoughtfully-AmLDjIBAEG8"
+    }
+  }
+}

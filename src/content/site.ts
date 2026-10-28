@@ -102,6 +102,7 @@ export const experts = {
   people: [
     {
       placeholder: true,
+      photo: "doctor-meera-nair", // demo stock portrait: replace with the doctor's own photo
       name: "Dr. Meera Nair",
       role: "Lead Dermatologist · MD, DVL",
       bio: "Placeholder profile. Fourteen years in clinical and aesthetic dermatology, with a focus on pigmentation in Indian skin tones.",
@@ -109,6 +110,7 @@ export const experts = {
     },
     {
       placeholder: true,
+      photo: "doctor-ananya-rao",
       name: "Dr. Ananya Rao",
       role: "Aesthetic Physician · MBBS, Dip. Aesthetic Medicine",
       bio: "Placeholder profile. Injectables and laser, with a stated preference for restraint.",
@@ -116,6 +118,7 @@ export const experts = {
     },
     {
       placeholder: true,
+      photo: "doctor-kavya-hegde",
       name: "Dr. Kavya Hegde",
       role: "Wellness & Hormonal Health · MD, Internal Medicine",
       bio: "Placeholder profile. PCOS, thyroid and perimenopause care, and the link between all three and skin.",

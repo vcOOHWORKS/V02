@@ -1,0 +1,220 @@
+/* Floating WhatsApp + Help, bottom right, clear of the iPhone home bar */
+.dock {
+  position: fixed;
+  right: max(20px, calc(env(safe-area-inset-right, 0px) + 12px));
+  bottom: max(20px, calc(env(safe-area-inset-bottom, 0px) + 12px));
+  z-index: 25; /* below the nav (29–30), so the mobile menu covers it */
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+  animation: dockIn 0.9s var(--ease-soft) 1.2s both;
+}
+@keyframes dockIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 52px;
+  min-width: 52px;
+  border: 1px solid rgb(151 48 46 / 0.16);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 18px 36px -22px rgb(30 19 20 / 0.55);
+  transition:
+    transform 0.5s var(--ease-soft),
+    box-shadow 0.5s var(--ease-soft),
+    background-color 0.4s;
+}
+.fab:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  .fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 40px -22px rgb(30 19 20 / 0.6);
+  }
+}
+.whatsapp {
+  color: #1c8f4e;
+  background: var(--color-paper);
+}
+.whatsapp svg {
+  width: 24px;
+  height: 24px;
+}
+.help {
+  padding-inline: 18px 20px;
+  color: var(--color-ivory);
+  background: var(--color-kohl);
+  border-color: transparent;
+}
+@media (hover: hover) {
+  .help:hover {
+    background: var(--color-brick);
+  }
+}
+.helpLabel {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+/* Help and close icons crossfade in one spot */
+.helpIcon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+}
+.helpIcon svg {
+  grid-area: 1 / 1;
+  transition:
+    opacity 0.35s,
+    transform 0.5s var(--ease-soft);
+}
+.helpIcon svg:last-child {
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+.helpIcon[data-open="true"] svg:first-child {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+.helpIcon[data-open="true"] svg:last-child {
+  opacity: 1;
+  transform: none;
+}
+
+.panel {
+  width: min(340px, calc(100vw - 40px));
+  padding: 24px 22px 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px 20px 6px 20px;
+  background: var(--color-paper);
+  box-shadow: 0 40px 70px -40px rgb(30 19 20 / 0.5);
+  transform-origin: bottom right;
+}
+.panel[data-open="true"] {
+  animation: panelIn 0.45s var(--ease-soft) both;
+}
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+}
+.title {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+.title em {
+  font-style: normal;
+  color: var(--em);
+}
+.sub {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--color-charcoal);
+}
+.list {
+  display: grid;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--line);
+  color: var(--color-ink);
+  transition: color 0.3s;
+}
+.item > svg {
+  justify-self: center;
+  color: var(--color-brick);
+}
+.item b {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 400;
+}
+.item small {
+  display: block;
+  margin-top: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12.5px;
+  color: var(--color-charcoal);
+}
+a.item:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+@media (hover: hover) {
+  a.item:hover {
+    color: var(--color-brick);
+  }
+}
+.muted {
+  opacity: 0.6;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  font-size: 13px;
+}
+.links a {
+  color: var(--color-brick);
+  border-bottom: 1px solid rgb(151 48 46 / 0.3);
+}
+
+@media (max-width: 640px) {
+  .fab {
+    height: 48px;
+    min-width: 48px;
+  }
+  /* Icon only on phones, to keep the corner light */
+  .helpLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .help {
+    padding: 0;
+  }
+}
+
+@media print {
+  .dock {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dock,
+  .panel[data-open="true"] {
+    animation: none;
+  }
+}

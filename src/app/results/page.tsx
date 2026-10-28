@@ -6,6 +6,7 @@ import { Booking } from "@/components/sections/Booking";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Motif } from "@/components/ui/Motif";
 import { Reveal } from "@/components/ui/Reveal";
+import { demoMode } from "@/content/results";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import styles from "@/components/company/company.module.css";
 
@@ -52,6 +53,12 @@ export default function ResultsPage() {
 
       <section className="band">
         <div className={`wrap ${styles.section}`} id="gallery">
+          {demoMode && (
+            <p className={styles.demoNote}>
+              Demo preview: the photos below are stock images showing how the gallery will look. They are not VO2 patient
+              results and will be replaced by real, consented cases.
+            </p>
+          )}
           <ResultsGallery filters />
         </div>
       </section>

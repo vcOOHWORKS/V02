@@ -66,10 +66,11 @@ Next.js 16 (App Router, Cache Components, Turbopack), React 19, Tailwind CSS v4,
 
 Placeholders are flagged with `placeholder: true` in `src/content/site.ts` and labelled on the page:
 
-- **Photography.** Slots use Unsplash photos, hotlinked from Unsplash's CDN as their API guidelines require, with every photographer credited on `/credits`. Replace them with the clinic's own shoot when it exists. Before/after frames and doctor portraits deliberately stay empty: they must be real.
-- **Doctors.** Names, credentials and quotes are invented. Replace with the real team, including registration numbers.
-- **Results and testimonials.** Samples only. Use real cases only with written consent.
-- **Clinic details.** Address, phone and WhatsApp number (`clinic.whatsapp`; set it and the WhatsApp button links to `wa.me`).
+- **Photography.** Slots use Unsplash photos, hotlinked from Unsplash's CDN as their API guidelines require, with every photographer credited on `/credits`. Replace them with the clinic's own shoot when it exists.
+- **Demo results (must go before launch).** The results gallery shows stock photos as before/after pairs, labelled "Demo images" on every frame. Set `demoMode = false` in `src/content/results.ts`, delete `src/content/demo-results-photos.json`, and add real, consented cases. Publishing stock photos as clinic results breaks ASCI and NMC advertising rules.
+- **Doctors.** Names, credentials and quotes are invented, and the portraits are demo stock photos (`doctor-*` slots in `unsplash-photos.json`, labelled "Demo portrait"). Replace with the real team's own photos, including registration numbers.
+- **Testimonials.** Samples only. Use real ones only with written consent.
+- **Clinic details.** Address, phone and WhatsApp number (`clinic.whatsapp`; set it and the floating WhatsApp button and Help panel link to `wa.me`, and a real `clinic.phone` adds a "Call us" link).
 - **Legal pages.** Privacy, terms and medical disclaimer are drafts written for an Indian clinic (DPDP Act 2023, Bengaluru jurisdiction). Have a lawyer review them.
 - **Clinical copy.** Treatment details and journal articles need review by the medical team.
 - **Brand story.** The reading of the name (VO2 as oxygen, breath and vitality) is a proposed interpretation; confirm it with the founders.

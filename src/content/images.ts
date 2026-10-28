@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import demoResultPhotos from "./demo-results-photos.json";
 import unsplashPhotos from "./unsplash-photos.json";
 
 // Photography for each image slot. Kept apart from the content files so the
@@ -27,9 +28,9 @@ export type Photo =
     };
 
 // Keys: "hero", a treatment slug, a journal slug, "salon", "salon-hair",
-// "salon-nails" or "branch-<slug>".
+// "salon-nails", "branch-<slug>" or "demo-<treatment>-<n>-<before|after>".
 export const photos: Partial<Record<string, Photo>> = Object.fromEntries(
-  Object.entries(unsplashPhotos).map(([slot, p]) => [slot, { kind: "unsplash" as const, ...p }]),
+  Object.entries({ ...unsplashPhotos, ...demoResultPhotos }).map(([slot, p]) => [slot, { kind: "unsplash" as const, ...p }]),
 );
 
 // Unsplash serves resized images through URL parameters on the raw URL.

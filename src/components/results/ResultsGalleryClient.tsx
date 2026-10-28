@@ -11,7 +11,7 @@ export type Slot = {
   treatment: string;
   tone: string;
 } & (
-  | { real: true; concern: string; sessions: string; timeline: string; doctor: string; before: string; after: string }
+  | { real: true; demo: boolean; concern: string; sessions: string; timeline: string; doctor: string; before: string; after: string }
   | { real: false }
 );
 
@@ -78,22 +78,31 @@ export function ResultsGalleryClient({ slots, chips }: Props) {
               type="button"
               className={styles.tileButton}
               onClick={() => setOpen(i)}
-              aria-label={`${s.treatment}: ${s.real ? `${s.concern}, view before and after` : "case photos to come, view frame"}`}
+              aria-label={`${s.treatment}: ${s.real ? `${s.concern}, view before and after` : "real cases coming soon"}`}
             >
-              <span className={`${styles.diptych} ${s.real ? "" : styles.ph}`} aria-hidden="true">
-                <span className={`${styles.half} ${styles.halfBefore}`} style={{ background: s.tone }}>
-                  {s.real && <Photo name={s.before} sizes="(max-width: 640px) 46vw, 300px" />}
-                  <span className={styles.tag}>Before</span>
+              {s.real ? (
+                <span className={styles.diptych} aria-hidden="true">
+                  <span className={`${styles.half} ${styles.halfBefore}`} style={{ background: s.tone }}>
+                    <Photo name={s.before} sizes="(max-width: 640px) 46vw, 300px" />
+                    <span className={styles.tag}>Before</span>
+                  </span>
+                  <span className={`${styles.half} ${styles.halfAfter}`} style={{ background: s.tone }}>
+                    <Photo name={s.after} sizes="(max-width: 640px) 46vw, 300px" />
+                    <span className={styles.tag}>After</span>
+                  </span>
+                  {s.demo && <span className={styles.demo}>Demo images</span>}
                 </span>
-                <span className={`${styles.half} ${styles.halfAfter}`} style={{ background: s.tone }}>
-                  {s.real && <Photo name={s.after} sizes="(max-width: 640px) 46vw, 300px" />}
-                  <span className={styles.tag}>After</span>
+              ) : (
+                // No real cases yet: the treatment's own photo, never shown as a before or after
+                <span className={styles.single} style={{ background: s.tone }} aria-hidden="true">
+                  <Photo name={s.slug} sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 400px" />
+                  <span className={styles.soon}>Real cases coming soon</span>
                 </span>
-              </span>
+              )}
               <span className={styles.caption}>
                 <span className={styles.captionTitle}>{s.treatment}</span>
                 <span className={styles.captionMeta}>
-                  {s.real ? `${s.concern} · ${s.sessions} · ${s.timeline}` : "Consented case photos to come"}
+                  {s.real ? `${s.concern} · ${s.sessions} · ${s.timeline}` : "Consented before and after photos to come"}
                 </span>
               </span>
             </button>
@@ -114,14 +123,21 @@ export function ResultsGalleryClient({ slots, chips }: Props) {
         {current && (
           <div className={styles.viewerInner}>
             <div className={styles.viewerMedia}>
-              <BeforeAfter
-                key={current.id}
-                fill
-                before={current.real ? current.before : undefined}
-                after={current.real ? current.after : undefined}
-                afterLabel={current.real ? `After · ${current.timeline}` : "After"}
-                footnote={current.real ? "Drag to compare" : "Drag to compare · Case photos to come"}
-              />
+              {current.real ? (
+                <BeforeAfter
+                  key={current.id}
+                  fill
+                  before={current.before}
+                  after={current.after}
+                  afterLabel={`After · ${current.timeline}`}
+                  footnote={current.demo ? "Drag to compare · Demo images, not a patient result" : "Drag to compare"}
+                />
+              ) : (
+                <div className={styles.viewerSingle} style={{ background: current.tone }}>
+                  <Photo name={current.slug} sizes="(max-width: 860px) 100vw, 60vw" />
+                  <span className={styles.soon}>Real cases coming soon</span>
+                </div>
+              )}
             </div>
             <div className={styles.viewerInfo}>
               <p className={styles.viewerCount}>
@@ -153,7 +169,11 @@ export function ResultsGalleryClient({ slots, chips }: Props) {
                   same light and angle before and after.
                 </p>
               )}
-              <p className={styles.viewerConsent}>Shared with written consent. No filters, no retouching. Results vary.</p>
+              <p className={styles.viewerConsent}>
+                {current.real && current.demo
+                  ? "Demo: stock photos showing the layout, not a VO2 patient result. Real cases will replace these."
+                  : "Shared with written consent. No filters, no retouching. Results vary."}
+              </p>
               <div className={styles.viewerNav}>
                 <button type="button" onClick={() => setOpen((open! - 1 + visible.length) % visible.length)} aria-label="Previous case">
                   ←

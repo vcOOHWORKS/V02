@@ -1,16 +1,16 @@
 {
   "hero": {
-    "id": "FN_uqEymfts",
-    "raw": "https://images.unsplash.com/photo-1702312686957-572286d28e11?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTF8fHdvbWFuJTIwYXBwbHlpbmclMjBmYWNlJTIwY3JlYW0lMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MXwxfHx8MTc5MzE4ODg5MHww&ixlib=rb-4.1.0",
-    "width": 2752,
-    "height": 4128,
-    "color": "#a6a6a6",
-    "position": "center 22%",
-    "alt": "A woman with clear, glowing skin applying face cream with her fingertips",
+    "id": "RB5u5OpZz-Q",
+    "raw": "https://images.unsplash.com/photo-1774897795513-9198beb13875?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MjF8fHdvbWFuJTIwc2tpbmNhcmUlMjBwb3J0cmFpdCUyMHdoaXRlJTIwYmFja2dyb3VuZHxlbnwxfDF8fHwxNzkzMTg4ODkwfDA&ixlib=rb-4.1.0",
+    "width": 4230,
+    "height": 6337,
+    "color": "#f3f3f3",
+    "position": "center 25%",
+    "alt": "A woman with dark, wavy hair and clear skin, photographed against a clean white background",
     "credit": {
-      "name": "PLANTADEA",
-      "profile": "https://unsplash.com/@plantadea",
-      "page": "https://unsplash.com/photos/a-woman-in-a-towel-holding-a-jar-of-cream-in-front-of-her-face-FN_uqEymfts"
+      "name": "Alex Larrondo",
+      "profile": "https://unsplash.com/@alexlarrondo",
+      "page": "https://unsplash.com/photos/young-woman-with-dark-wavy-hair-in-a-black-turtleneck-RB5u5OpZz-Q"
     }
   },
   "skin": {
@@ -319,6 +319,48 @@
       "name": "Yosuke Ota",
       "profile": "https://unsplash.com/@yosuke_ota",
       "page": "https://unsplash.com/photos/a-pair-of-hands-holding-a-white-mug-yiyzz1PedMs"
+    }
+  },
+  "doctor-meera-nair": {
+    "id": "P4VXFXKyOQM",
+    "raw": "https://images.unsplash.com/photo-1644335326474-544fbcf8855f?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8aW5kaWFuJTIwd29tYW4lMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfDF8fHwxNzkzMTg5NjIzfDA&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 5000,
+    "color": "#c0c0c0",
+    "position": "center 25%",
+    "alt": "Stock portrait standing in for a team photo (demo)",
+    "credit": {
+      "name": "Othman El Marzak",
+      "profile": "https://unsplash.com/@othmanelmarzak",
+      "page": "https://unsplash.com/photos/a-close-up-of-a-person-with-a-smile-on-their-face-P4VXFXKyOQM"
+    }
+  },
+  "doctor-ananya-rao": {
+    "id": "2G73aoMR-Go",
+    "raw": "https://images.unsplash.com/photo-1757125736482-328a3cdd9743?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwd29tYW4lMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfDF8fHwxNzkzMTg5NjIzfDA&ixlib=rb-4.1.0",
+    "width": 4160,
+    "height": 6240,
+    "color": "#595940",
+    "position": "center 22%",
+    "alt": "Stock portrait standing in for a team photo (demo)",
+    "credit": {
+      "name": "Ike Ellyana",
+      "profile": "https://unsplash.com/@ikemotret20",
+      "page": "https://unsplash.com/photos/a-woman-in-a-lab-coat-smiles-outdoors-2G73aoMR-Go"
+    }
+  },
+  "doctor-kavya-hegde": {
+    "id": "-JSIJObcgqU",
+    "raw": "https://images.unsplash.com/photo-1743872384305-e4ab94e6ca5e?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTd8fGluZGlhbiUyMHdvbWFuJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXwxfHx8MTc5MzE4OTYyM3ww&ixlib=rb-4.1.0",
+    "width": 3456,
+    "height": 5184,
+    "color": "#262626",
+    "position": "center 30%",
+    "alt": "Stock portrait standing in for a team photo (demo)",
+    "credit": {
+      "name": "Лера :^",
+      "profile": "https://unsplash.com/@maltasaaa",
+      "page": "https://unsplash.com/photos/a-woman-stands-by-a-window-looking-outside--JSIJObcgqU"
     }
   }
 }

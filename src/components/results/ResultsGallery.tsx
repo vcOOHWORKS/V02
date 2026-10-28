@@ -1,4 +1,4 @@
-import { cases, placeholderFrames } from "@/content/results";
+import { cases, demoCases, demoMode, placeholderFrames } from "@/content/results";
 import { categories } from "@/content/treatments";
 import { ResultsGalleryClient, type Slot } from "./ResultsGalleryClient";
 
@@ -16,13 +16,15 @@ export function ResultsGallery({ treatment, filters = false, limit }: Props) {
   const scope = treatment ? categories.filter((c) => c.slug === treatment) : categories;
   const slots: Slot[] = scope.flatMap((c): Slot[] => {
     const real = cases.filter((x) => x.treatment === c.slug);
-    if (real.length) {
-      return real.map((x) => ({
+    const demo = demoMode && !real.length ? demoCases.filter((x) => x.treatment === c.slug) : [];
+    if (real.length || demo.length) {
+      return [...real, ...demo].map((x) => ({
         id: x.id,
         slug: c.slug,
         treatment: c.title,
         tone: c.tone,
         real: true as const,
+        demo: !("consentOnFile" in x),
         concern: x.concern,
         sessions: x.sessions,
         timeline: x.timeline,

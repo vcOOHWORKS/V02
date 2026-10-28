@@ -2,6 +2,7 @@ import { ViewTransition, type ReactNode } from "react";
 import { Footer } from "@/components/sections/Footer";
 import { Nav } from "@/components/sections/Nav";
 import { Motif } from "@/components/ui/Motif";
+import { HelpDock } from "./HelpDock";
 
 type Props = {
   children: ReactNode;
@@ -28,6 +29,7 @@ export function SiteShell({ children, current, transition = true }: Props) {
         main
       )}
       <Footer />
+      <HelpDock />
     </>
   );
 }
