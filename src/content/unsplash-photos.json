@@ -376,5 +376,89 @@
       "profile": "https://unsplash.com/@streetog",
       "page": "https://unsplash.com/photos/woman-with-brown-hair-smiling-DDO0Cv4U9Gs"
     }
+  },
+  "ayurveda": {
+    "id": "xugoOgRPngU",
+    "raw": "https://images.unsplash.com/photo-1577117633143-a2437fb9bdda?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTV8fGF5dXJ2ZWRhJTIwb2lsJTIwbWFzc2FnZXxlbnwxfDF8fHwxNzkzMTk1MDMwfDA&ixlib=rb-4.1.0",
+    "width": 3024,
+    "height": 4032,
+    "color": "#262626",
+    "position": "center 60%",
+    "alt": "A brass bowl of warm water with flowers, beside folded towels, for an Ayurvedic ritual",
+    "credit": {
+      "name": "Toranong Mahachai",
+      "profile": "https://unsplash.com/@deknoitiger",
+      "page": "https://unsplash.com/photos/person-sitting-with-both-feet-in-brown-bowl-xugoOgRPngU"
+    }
+  },
+  "recovery": {
+    "id": "qybZ2w0CzMw",
+    "raw": "https://images.unsplash.com/photo-1706795034830-de41aee06afa?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8OHx8cmVsYXhpbmclMjBtYXNzYWdlJTIwc3BhJTIwd29tYW58ZW58MXwxfHx8MTc5MzE5NTA0NXww&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#a68c8c",
+    "position": "center 40%",
+    "alt": "A woman resting with her eyes closed during a gentle head massage",
+    "credit": {
+      "name": "Anna Keibalo",
+      "profile": "https://unsplash.com/@anyutakejbalo",
+      "page": "https://unsplash.com/photos/a-woman-getting-a-facial-massage-at-a-spa-qybZ2w0CzMw"
+    }
+  },
+  "physiotherapy": {
+    "id": "-MLRlIgtPYU",
+    "raw": "https://images.unsplash.com/photo-1717500251688-1c369ec2ab44?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NHx8cGh5c2lvdGhlcmFwaXN0JTIwd29tYW4lMjBwYXRpZW50fGVufDF8MXx8fDE3OTMxOTUwNDZ8MA&ixlib=rb-4.1.0",
+    "width": 4672,
+    "height": 7008,
+    "color": "#d9d9d9",
+    "position": "center 55%",
+    "alt": "A physiotherapist guiding a client through an exercise in a bright studio",
+    "credit": {
+      "name": "Ahmet Kurt",
+      "profile": "https://unsplash.com/@ahmetkurt",
+      "page": "https://unsplash.com/photos/a-couple-of-women-are-doing-exercises-in-a-gym--MLRlIgtPYU"
+    }
+  },
+  "pilates": {
+    "id": "QsPYPHwyNsM",
+    "raw": "https://images.unsplash.com/photo-1717500251988-cc4f6e393a75?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MTB8fHBpbGF0ZXMlMjByZWZvcm1lciUyMHdvbWFufGVufDF8MXx8fDE3OTMxOTUwNDZ8MA&ixlib=rb-4.1.0",
+    "width": 4672,
+    "height": 7008,
+    "color": "#d9d9d9",
+    "position": "center 55%",
+    "alt": "A woman working on a Pilates reformer in a sunlit studio",
+    "credit": {
+      "name": "Ahmet Kurt",
+      "profile": "https://unsplash.com/@ahmetkurt",
+      "page": "https://unsplash.com/photos/a-woman-sitting-on-a-piyor-in-a-gym-QsPYPHwyNsM"
+    }
+  },
+  "zumba": {
+    "id": "LIs-2xpMOHA",
+    "raw": "https://images.unsplash.com/photo-1770270402445-b72169c6e48a?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8NXx8d29tZW4lMjBkYW5jZSUyMGZpdG5lc3MlMjBjbGFzc3xlbnwxfDF8fHwxNzkzMTk1MDQ3fDA&ixlib=rb-4.1.0",
+    "width": 4000,
+    "height": 6000,
+    "color": "#f3f3f3",
+    "position": "center 35%",
+    "alt": "Women high-fiving and smiling after a dance fitness class",
+    "credit": {
+      "name": "Ashford Marx",
+      "profile": "https://unsplash.com/@ashford_marx",
+      "page": "https://unsplash.com/photos/three-women-giving-each-other-a-high-five-LIs-2xpMOHA"
+    }
+  },
+  "yoga-academy": {
+    "id": "XKcpuLK_CLQ",
+    "raw": "https://images.unsplash.com/photo-1650284178711-f1c13222f793?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8M3x8aW5kaWFuJTIwd29tYW4lMjB5b2dhfGVufDF8MXx8fDE3OTMxOTUwNDh8MA&ixlib=rb-4.1.0",
+    "width": 4480,
+    "height": 6720,
+    "color": "#d9c0a6",
+    "position": "center 30%",
+    "alt": "A woman meditating cross-legged among green trees",
+    "credit": {
+      "name": "Anil Sharma",
+      "profile": "https://unsplash.com/@anil_sharma_india",
+      "page": "https://unsplash.com/photos/a-woman-sitting-in-a-yoga-position-in-the-woods-XKcpuLK_CLQ"
+    }
   }
 }
