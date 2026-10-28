@@ -1,11 +1,11 @@
 import { Motif } from "@/components/ui/Motif";
 import { Reveal } from "@/components/ui/Reveal";
 import { booking, clinic } from "@/content/site";
-import { categories } from "@/content/treatments";
+import { groups } from "@/content/treatments";
 import { ConsultForm } from "./ConsultForm";
 import styles from "./Booking.module.css";
 
-const concerns = [...categories.map((c) => c.title), "Salon & nails", "Not sure yet"];
+const concerns = [...groups.map((g) => g.title), "Salon & nails", "Not sure yet"];
 
 // An invitation card resting on the brick band, like a patrika on silk.
 // `defaultConcern` preselects a treatment when the section sits on its page.

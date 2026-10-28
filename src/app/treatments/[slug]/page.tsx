@@ -16,7 +16,7 @@ export async function generateMetadata(props: PageProps<"/treatments/[slug]">): 
   if (!category) return {};
   return pageMeta({
     title: category.title,
-    description: `${category.summary} Doctor-led care at VO2, Bengaluru.`,
+    description: `${category.summary} At VO2, Bengaluru.`,
     path: `/treatments/${category.slug}`,
     image: `/treatments/${category.slug}/opengraph-image`,
   });

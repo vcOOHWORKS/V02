@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { Motif } from "@/components/ui/Motif";
 import { clinic, footer } from "@/content/site";
-import { categories, treatmentHref } from "@/content/treatments";
+import { groupHref, groupedCategories, treatmentHref } from "@/content/treatments";
 import { LettersSignup } from "./LettersSignup";
 import styles from "./Footer.module.css";
 
@@ -28,7 +28,34 @@ export function Footer() {
 
         <div className={styles.kolam} aria-hidden="true" />
 
-        {/* Directory */}
+        {/* Directory of care: the four groups, as in the menu */}
+        <nav className={styles.care} aria-label="Treatments">
+          {groupedCategories.map((g) => (
+            <div key={g.slug} className={styles.careGroup}>
+              <h4>
+                <Link href={groupHref(g.slug)}>{g.title}</Link>
+              </h4>
+              <ul>
+                {g.items.map((c) => (
+                  <li key={c.slug}>
+                    <Link href={treatmentHref(c.slug)}>{c.title}</Link>
+                  </li>
+                ))}
+              </ul>
+              {g.slug === "dental" && (
+                <>
+                  <h4 className={styles.careExtra}>Salon</h4>
+                  <ul>
+                    <li>
+                      <Link href="/salon-nails">Salon &amp; nails</Link>
+                    </li>
+                  </ul>
+                </>
+              )}
+            </div>
+          ))}
+        </nav>
+
         <div className={styles.columns}>
           <div className={styles.brand}>
             <Logo chip />
@@ -38,29 +65,9 @@ export function Footer() {
             </a>
           </div>
 
-          <nav aria-label="Treatments">
-            <h4>Treatments</h4>
+          <nav aria-label="About VO2">
+            <h4>About</h4>
             <ul>
-              {categories.map((c) => (
-                <li key={c.slug}>
-                  <Link href={treatmentHref(c.slug)}>{c.title}</Link>
-                </li>
-              ))}
-              <li>
-                <Link href="/salon-nails">Salon &amp; nails</Link>
-              </li>
-            </ul>
-          </nav>
-
-          <nav aria-label="Clinic">
-            <h4>Clinic</h4>
-            <ul>
-              <li>
-                <Link href="/our-story">Our brand story</Link>
-              </li>
-              <li>
-                <Link href="/results">Results gallery</Link>
-              </li>
               <li>
                 <Link href="/about">About us</Link>
               </li>
@@ -68,10 +75,25 @@ export function Footer() {
                 <Link href="/founder">Our founder</Link>
               </li>
               <li>
-                <Link href="/branches">Branches</Link>
+                <Link href="/our-story">Our brand story</Link>
               </li>
               <li>
                 <Link href="/about#experts">Our experts</Link>
+              </li>
+              <li>
+                <Link href="/branches">Branches</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Explore">
+            <h4>Explore</h4>
+            <ul>
+              <li>
+                <Link href="/treatments">All treatments</Link>
+              </li>
+              <li>
+                <Link href="/results">Results gallery</Link>
               </li>
               <li>
                 <Link href="/#ritual">The VO2 Way</Link>

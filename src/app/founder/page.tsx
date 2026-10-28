@@ -56,16 +56,13 @@ export default function FounderPage() {
               <span aria-current="page">Our founder</span>
             </nav>
             <h1 className={styles.name}>
-              {founder.name.split(" ").map((part, i) => (
-                <span key={part} className="enter" style={{ "--enter-step": i } as React.CSSProperties}>
-                  {i ? <em>{part}</em> : part}
-                </span>
-              ))}
+              {/* First name, then the family name emphasised */}
+              <span className="enter">{founder.name.split(" ")[0]}</span>
+              <span className="enter" style={{ "--enter-step": 1 } as React.CSSProperties}>
+                <em>{founder.name.split(" ").slice(1).join(" ")}</em>
+              </span>
             </h1>
-            <p className={styles.role}>
-              {founder.role}
-              {founder.placeholder && <span className={styles.flag}>Placeholder profile</span>}
-            </p>
+            <p className={styles.role}>{founder.role}</p>
             <blockquote className={styles.heroQuote}>
               <p>&ldquo;{founder.hero.quote}&rdquo;</p>
             </blockquote>
@@ -79,7 +76,7 @@ export default function FounderPage() {
             <span className={styles.archEcho} aria-hidden="true" />
             <figure className={styles.portrait}>
               <Photo name={founder.photo} sizes="(max-width: 900px) 80vw, 460px" eager />
-              {hasPhoto(founder.photo) && founder.placeholder && <span className={styles.demo}>Demo portrait</span>}
+              {!hasPhoto(founder.photo) && <Motif name="lotus" stroke="rgba(252,250,248,.45)" className={styles.portraitArt} />}
             </figure>
           </div>
         </div>

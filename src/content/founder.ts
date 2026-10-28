@@ -1,12 +1,11 @@
-// The founder page. PLACEHOLDER: the name, portrait, letter and chapters are
-// stand-ins written from the brand story. Replace them with the founder's own
-// words, photo and history before launch.
+// The founder page. DRAFT: the letter, chapters, beliefs and answers were written
+// from the brand story and must be reviewed and approved by Sangita before launch.
+// The portrait goes in the "founder" photo slot (src/assets/photos/founder.jpg).
 
 export const founder = {
-  placeholder: true,
-  name: "Aditi Menon",
+  name: "Sangita Aiyyar Reddy",
   role: "Founder, VO2",
-  photo: "founder", // demo stock portrait in unsplash-photos.json
+  photo: "founder",
   hero: {
     quote: "I wanted to build the place I could never find: expert enough to trust, and gentle enough to rest in.",
   },

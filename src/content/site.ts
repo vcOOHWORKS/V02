@@ -198,13 +198,13 @@ export const footer = {
 export const about = {
   hero: {
     heading: ["Doctor-led care,", "designed for women."],
-    lead: "VO2 is a women-first aesthetic and wellness clinic in Bengaluru. We bring dermatology, dentistry, internal medicine and thoughtful rituals together under one roof, so the care you receive is expert, unhurried and planned around your life.",
+    lead: "VO2 is a women-first aesthetic and wellness clinic in Bengaluru. We bring dermatology, dentistry, Ayurveda, physiotherapy and movement together under one roof, so the care you receive is expert, unhurried and planned around your life.",
   },
   glance: [
     { label: "Founded in", value: "Bengaluru" },
     { label: "Care for", value: "Women, first" },
     { label: "Led by", value: "Registered doctors" },
-    { label: "Treatment areas", value: "Nine" },
+    { label: "Areas of care", value: "Four, under one roof" },
     { label: "Open", value: "Mon–Sat, 10am–7pm" },
   ],
   standards: {

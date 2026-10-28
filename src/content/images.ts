@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import founderPhoto from "@/assets/photos/founder.png";
 import demoResultPhotos from "./demo-results-photos.json";
 import unsplashPhotos from "./unsplash-photos.json";
 
@@ -29,9 +30,13 @@ export type Photo =
 
 // Keys: "hero", a treatment slug, a journal slug, "salon", "salon-hair",
 // "salon-nails", "branch-<slug>" or "demo-<treatment>-<n>-<before|after>".
-export const photos: Partial<Record<string, Photo>> = Object.fromEntries(
-  Object.entries({ ...unsplashPhotos, ...demoResultPhotos }).map(([slot, p]) => [slot, { kind: "unsplash" as const, ...p }]),
-);
+export const photos: Partial<Record<string, Photo>> = {
+  ...Object.fromEntries(
+    Object.entries({ ...unsplashPhotos, ...demoResultPhotos }).map(([slot, p]) => [slot, { kind: "unsplash" as const, ...p }]),
+  ),
+  // The clinic's own photography
+  founder: { kind: "local", src: founderPhoto, alt: "Sangita Aiyyar Reddy, founder of VO2, standing among plants in soft daylight", position: "68% center" },
+};
 
 // Unsplash serves resized images through URL parameters on the raw URL.
 export const unsplashSrc = (raw: string, width: number) => `${raw}&w=${width}&q=75&auto=format&fit=max`;

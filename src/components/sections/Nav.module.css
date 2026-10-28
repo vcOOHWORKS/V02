@@ -154,38 +154,76 @@
 }
 .megaInner {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 56px;
-  padding-block: 44px 52px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 48px;
+  padding-block: 36px 40px;
   text-transform: none;
   letter-spacing: normal;
 }
 
-.megaIntro {
+/* Group rail */
+.railCol {
   display: flex;
   flex-direction: column;
-  padding-right: 40px;
+  padding-right: 32px;
   border-right: 1px solid var(--line);
 }
-.megaHeading {
-  font-size: 32px;
-  line-height: 1.08;
-  font-weight: 200;
-  letter-spacing: -0.03em;
+.rail {
+  display: grid;
+}
+.railTab {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0 16px 18px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-charcoal);
+  transition: color 0.3s;
+}
+/* A brick thread marks the active group */
+.railTab::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2px;
+  height: 0;
+  background: var(--color-brick);
+  transform: translateY(-50%);
+  transition: height 0.45s var(--ease-soft);
+}
+.railTab[aria-selected="true"] {
   color: var(--color-ink);
 }
-.megaHeading em {
-  display: block;
+.railTab[aria-selected="true"]::before {
+  height: 60%;
+}
+.railTab:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+.railTitle {
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.015em;
+}
+.railTab[aria-selected="true"] .railTitle {
   font-weight: 400;
   color: var(--color-brick);
 }
-.megaText {
-  margin-top: 16px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--color-charcoal);
+.railCount {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--fg-dim);
 }
-.megaLinks {
+.railLinks {
   display: grid;
   gap: 14px;
   margin-top: auto;
@@ -210,18 +248,41 @@
   }
 }
 
-/* Nine categories in a 3 × 3 grid: a small arch beside each title */
+/* The active group's treatments beside its featured card */
+.groupPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  animation: panelIn 0.45s var(--ease-soft) both;
+}
+.groupPanel[hidden] {
+  display: none;
+}
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
 .megaGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 6px 32px;
+}
+.megaGridSolo {
+  grid-template-columns: minmax(0, 1fr);
 }
 .tile {
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
+  grid-template-columns: 52px minmax(0, 1fr);
   grid-template-rows: 1fr auto auto 1fr;
-  column-gap: 18px;
-  row-gap: 3px;
+  column-gap: 16px;
+  row-gap: 2px;
+  padding: 8px;
+  margin-inline: -8px;
+  border-radius: 10px;
+  transition: background-color 0.35s;
 }
 /* Small jharokha arch */
 .tileImage {
@@ -230,20 +291,15 @@
   grid-row: 1 / -1;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border-radius: 999px 999px 4px 4px;
-}
-.tileTitle {
-  grid-row: 2;
-}
-.tileKeywords {
-  grid-row: 3;
+  border-radius: 999px 999px 3px 3px;
 }
 .tilePhoto {
   transition: transform 1.2s var(--ease-soft);
 }
 .tileTitle {
   position: relative;
-  font-size: 16px;
+  grid-row: 2;
+  font-size: 15.5px;
   line-height: 1.25;
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -251,20 +307,83 @@
   transition: color 0.3s;
 }
 .tileKeywords {
+  grid-row: 3;
   font-size: 12.5px;
   line-height: 1.45;
   color: var(--color-charcoal);
 }
 @media (hover: hover) {
+  .tile:hover {
+    background: var(--color-ivory);
+  }
   .tile:hover .tilePhoto {
-    transform: scale(1.06);
+    transform: scale(1.08);
   }
   .tile:hover .tileTitle {
     color: var(--color-brick);
   }
 }
-.tile:focus-visible .tileTitle {
+.tile:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 0;
+}
+
+.feature {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.featureImage {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 140px 140px 4px 4px / 100px 100px 4px 4px;
+}
+.featureTitle {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+.featureTitle em {
+  font-weight: 400;
   color: var(--color-brick);
+}
+.featureText {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+}
+.feature .megaLink {
+  margin-top: 6px;
+}
+@media (hover: hover) {
+  .feature:hover .tilePhoto {
+    transform: scale(1.05);
+  }
+  .feature:hover .megaLink::after {
+    transform: translateX(5px);
+  }
+}
+
+/* A quiet strip along the bottom of the menu */
+.megaFoot {
+  border-top: 1px solid var(--line);
+  background: var(--color-ivory);
+}
+.megaFootInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 14px;
+  font-size: 13px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--color-charcoal);
 }
 
 /* ---------- Right side ---------- */
@@ -467,6 +586,16 @@
   overflow: hidden;
   border-radius: 999px 999px 3px 3px;
 }
+.subGroup + .subGroup {
+  margin-top: 6px;
+}
+.panelSub .subGroupTitle {
+  padding-top: 14px;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brick);
+}
 .panelSubAll {
   font-size: 11px !important;
   letter-spacing: 0.24em;
@@ -494,14 +623,15 @@
     letter-spacing: 0.16em;
   }
   .megaInner {
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 36px;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 32px;
   }
-  .megaIntro {
-    padding-right: 28px;
+  .railCol {
+    padding-right: 20px;
   }
-  .megaHeading {
-    font-size: 26px;
+  .groupPanel {
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 32px;
   }
 }
 

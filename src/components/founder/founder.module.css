@@ -160,6 +160,14 @@
   background-clip: padding-box;
   box-shadow: 0 40px 80px -50px rgb(30 19 20 / 0.55);
 }
+.portraitArt {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 70%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
 .demo {
   position: absolute;
   left: 50%;

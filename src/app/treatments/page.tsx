@@ -5,7 +5,7 @@ import { Booking } from "@/components/sections/Booking";
 import { Motif } from "@/components/ui/Motif";
 import { Reveal } from "@/components/ui/Reveal";
 import { TreatmentCard } from "@/components/ui/TreatmentCard";
-import { categories } from "@/content/treatments";
+import { groupedCategories } from "@/content/treatments";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { breadcrumbLd, pageMeta } from "@/lib/seo";
 import styles from "@/components/treatment/treatment.module.css";
@@ -13,7 +13,7 @@ import styles from "@/components/treatment/treatment.module.css";
 export const metadata: Metadata = pageMeta({
   title: "Treatments",
   description:
-    "Skin, medi facials, laser, hair, non-surgical aesthetics, permanent makeup, body, advanced and dental care at VO2, Bengaluru. Doctor-led, planned around Indian skin.",
+    "Skin & aesthetics, Ayurveda & recovery, movement (physiotherapy, Pilates, Zumba, Yoga Academy) and dental care at VO2, Bengaluru.",
   path: "/treatments",
 });
 
@@ -38,22 +38,42 @@ export default function TreatmentsIndex() {
             Every treatment, <em>one intention.</em>
           </h1>
           <p className={styles.indexLead}>
-            Nine areas of care, each led by a doctor and planned around you. If you are not sure where to start,
-            begin with a consultation and we will guide you.
+            Four ways of caring for yourself, under one roof: skin and aesthetics, Ayurveda and recovery, movement, and
+            dental care. If you are not sure where to start, begin with a consultation and we will guide you.
           </p>
-          <div className={styles.kolam} aria-hidden="true" />
+          {/* Jump links to each group */}
+          <nav className={styles.groupJump} aria-label="Treatment groups">
+            {groupedCategories.map((g) => (
+              <a key={g.slug} href={`#${g.slug}`}>
+                {g.title}
+                <span>{g.items.length}</span>
+              </a>
+            ))}
+          </nav>
         </div>
       </section>
 
-      <section className="band">
-        <div className={`wrap ${styles.indexGridWrap}`}>
-          <Reveal stagger className={`swipe-sm ${styles.indexGrid}`}>
-            {categories.map((c) => (
-              <TreatmentCard key={c.slug} category={c} />
-            ))}
-          </Reveal>
-        </div>
-      </section>
+      {groupedCategories.map((g, i) => (
+        <section key={g.slug} id={g.slug} className={`${i % 2 ? "" : "band"} ${styles.groupSection}`}>
+          <div className={`wrap ${styles.groupLayout}`}>
+            <Reveal className={styles.groupIntro}>
+              <span className={styles.groupNumber}>{String(i + 1).padStart(2, "0")}</span>
+              <h2 className="display">
+                {g.heading[0]} <em>{g.heading[1]}</em>
+              </h2>
+              <p>{g.blurb}</p>
+              <a href="#book" className={styles.allLink}>
+                {g.cta}
+              </a>
+            </Reveal>
+            <Reveal stagger className={`swipe-sm ${styles.groupCards}`}>
+              {g.items.map((c) => (
+                <TreatmentCard key={c.slug} category={c} />
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      ))}
 
       <Booking />
     </SiteShell>

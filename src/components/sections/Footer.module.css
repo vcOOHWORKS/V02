@@ -130,6 +130,61 @@
 
 /* ---------- Directory ---------- */
 
+/* Directory of care: the four treatment groups across the full width */
+.care {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px 48px;
+  margin-bottom: 72px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14.5px;
+  color: var(--fg-dim);
+}
+.care h4 {
+  margin-bottom: 22px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+}
+.care h4 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.care h4 a::after {
+  content: "→";
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.4s,
+    transform 0.5s var(--ease-soft);
+}
+.care ul {
+  display: grid;
+  gap: 12px;
+}
+.care a {
+  transition: color 0.4s;
+}
+.care .careExtra {
+  margin-top: 36px;
+}
+@media (hover: hover) {
+  .care a:hover {
+    color: var(--color-ivory);
+  }
+  .care h4 a:hover {
+    color: var(--color-coral-soft);
+  }
+  .care h4 a:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .columns {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
@@ -260,6 +315,9 @@
   .letters {
     justify-self: start;
   }
+  .care {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .columns {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -274,6 +332,11 @@
   }
   .kolam {
     margin-block: 64px 52px;
+  }
+  .care {
+    gap: 40px 24px;
+    margin-bottom: 56px;
+    padding-bottom: 48px;
   }
   .columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));

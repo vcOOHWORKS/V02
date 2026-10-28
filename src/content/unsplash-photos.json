@@ -376,19 +376,5 @@
       "profile": "https://unsplash.com/@streetog",
       "page": "https://unsplash.com/photos/woman-with-brown-hair-smiling-DDO0Cv4U9Gs"
     }
-  },
-  "founder": {
-    "id": "gSHdzsKoZmQ",
-    "raw": "https://images.unsplash.com/photo-1772544797306-42ffcda5c63b?ixid=M3wxMTE2MDM1fDB8MXxzZWFyY2h8MjB8fGluZGlhbiUyMHdvbWFuJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXwxfHx8MTc5MzE4OTYyM3ww&ixlib=rb-4.1.0",
-    "width": 6750,
-    "height": 12000,
-    "color": "#262626",
-    "position": "center 25%",
-    "alt": "Stock portrait standing in for the founder's photo (demo)",
-    "credit": {
-      "name": "Jatin Punia",
-      "profile": "https://unsplash.com/@jatin_punia",
-      "page": "https://unsplash.com/photos/a-woman-with-dark-hair-and-brown-eyes-looks-forward-gSHdzsKoZmQ"
-    }
   }
 }

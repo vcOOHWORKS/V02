@@ -12,8 +12,11 @@ export type TreatmentItem = {
 
 export type Step = { title: string; body: string };
 
+export type GroupSlug = "skin-aesthetics" | "ayurveda-recovery" | "movement" | "dental";
+
 export type Category = {
   slug: string;
+  group: GroupSlug;
   title: string;
   // Hero heading: the second part is emphasised.
   heading: [string, string];
@@ -29,6 +32,8 @@ export type Category = {
   note: { quote: string; name: string; role: string; placeholder: true };
   faqs: { q: string; a: string }[];
   related: string[];
+  firstVisit?: string; // falls back to the group's
+  results?: false; // no before/after gallery (movement, therapies)
 };
 
 export const defaultSteps: Step[] = [
@@ -41,6 +46,7 @@ export const defaultSteps: Step[] = [
 export const categories: Category[] = [
   {
     slug: "skin",
+    group: "skin-aesthetics",
     title: "Skin treatments",
     heading: ["Skin", "treatments"],
     keywords: "Acne, pigmentation, ageing",
@@ -123,6 +129,7 @@ export const categories: Category[] = [
   },
   {
     slug: "medi-facials",
+    group: "skin-aesthetics",
     title: "Medi facials",
     heading: ["Medi", "facials"],
     keywords: "Glow, hydration, clarity",
@@ -201,6 +208,7 @@ export const categories: Category[] = [
   },
   {
     slug: "laser",
+    group: "skin-aesthetics",
     title: "Laser treatments",
     heading: ["Laser", "treatments"],
     keywords: "Hair reduction, toning, scars",
@@ -282,6 +290,7 @@ export const categories: Category[] = [
   },
   {
     slug: "hair",
+    group: "skin-aesthetics",
     title: "Hair treatments",
     heading: ["Hair", "treatments"],
     keywords: "Hair fall, PRP, scalp care",
@@ -360,6 +369,7 @@ export const categories: Category[] = [
   },
   {
     slug: "non-surgical-aesthetics",
+    group: "skin-aesthetics",
     title: "Non-surgical aesthetics",
     heading: ["Non-surgical", "aesthetics"],
     keywords: "Injectables, fillers, lifting",
@@ -442,6 +452,7 @@ export const categories: Category[] = [
   },
   {
     slug: "permanent-makeup",
+    group: "skin-aesthetics",
     title: "Permanent makeup (PMU)",
     heading: ["Permanent", "makeup"],
     keywords: "Brows, lips, lash line",
@@ -530,6 +541,7 @@ export const categories: Category[] = [
   },
   {
     slug: "body",
+    group: "skin-aesthetics",
     title: "Body treatments",
     heading: ["Body", "treatments"],
     keywords: "Contouring, tightening, stretch marks",
@@ -608,6 +620,7 @@ export const categories: Category[] = [
   },
   {
     slug: "advanced",
+    group: "skin-aesthetics",
     title: "Advanced treatments",
     heading: ["Advanced", "treatments"],
     keywords: "IV therapy, PCOS care, RF",
@@ -679,6 +692,8 @@ export const categories: Category[] = [
   },
   {
     slug: "dental",
+    group: "dental",
+    firstVisit: "Dental check-up",
     title: "Dental & smile care",
     heading: ["Dental &", "smile care"],
     keywords: "Whitening, aligners, implants",
@@ -769,7 +784,558 @@ export const categories: Category[] = [
     ],
     related: ["non-surgical-aesthetics", "medi-facials", "permanent-makeup"],
   },
+  {
+    slug: "ayurveda",
+    group: "ayurveda-recovery",
+    title: "Ayurveda",
+    heading: ["Ayurvedic", "therapies"],
+    keywords: "Oil massage, Shirodhara, detox",
+    tagline: "An old way of resting, offered with modern care.",
+    summary: "Warm oil therapies, Shirodhara and seasonal programmes, guided by an Ayurveda physician.",
+    intro:
+      "Ayurveda at VO2 is about rest and rhythm: warm oils, unhurried hands and routines that follow the seasons. Every programme begins with a consultation with a qualified Ayurveda physician, and runs alongside, never instead of, the medical care you already receive.",
+    tone: "linear-gradient(172deg,#efe4d6 0%,#d6ad7f 52%,#8f4a2c 100%)",
+    brief: "Warm oil pouring in a slow ribbon over a brass vessel. Steam, marigold, afternoon light.",
+    concerns: ["Stress & poor sleep", "Feeling run down", "Muscle tension", "Dry skin & scalp", "Seasonal reset", "Time for yourself"],
+    items: [
+      {
+        name: "Ayurvedic consultation",
+        description: "A conversation with an Ayurveda physician about your routine, sleep, digestion and season, ending in a simple written plan.",
+        duration: "45 min",
+        sessions: "1, then as needed",
+        downtime: "None",
+      },
+      {
+        name: "Warm oil massage (Abhyanga)",
+        description: "A full-body massage with warm herbal oils chosen for you, given in long, rhythmic strokes to release tension.",
+        duration: "60 min",
+        sessions: "Weekly, or as a series of 3–7",
+        downtime: "None; rest afterwards",
+      },
+      {
+        name: "Shirodhara",
+        description: "A slow, steady stream of warm oil poured across the forehead while you lie still. Deeply calming for a busy mind.",
+        duration: "45–60 min",
+        sessions: "Series of 3–7",
+        downtime: "None; avoid washing hair for a few hours",
+      },
+      {
+        name: "Herbal powder massage (Udvartana)",
+        description: "An invigorating massage with warm herbal powders that leaves skin smooth and the body feeling lighter.",
+        duration: "45 min",
+        sessions: "Series of 5–7",
+        downtime: "None",
+      },
+      {
+        name: "Seasonal reset programme",
+        description: "A guided programme of therapies, simple food and rest, timed to the change of season and supervised by the physician.",
+        duration: "Half days",
+        sessions: "5–7 days",
+        downtime: "Lighter days advised",
+      },
+    ],
+    steps: [
+      { title: "Consult", body: "A relaxed conversation with an Ayurveda physician about your routine, sleep, digestion and what you would like to feel." },
+      { title: "Plan", body: "A written plan of therapies, timings and simple daily habits, with prices, agreed before anything begins." },
+      { title: "Rest", body: "Therapies in a warm, quiet room, followed by time to lie still with a cup of herbal tea. No rushing back out." },
+      { title: "Continue", body: "Simple routines to carry home, a follow-up on WhatsApp within 48 hours, and a review at the next change of season." },
+    ],
+    note: {
+      quote: "Ayurveda asks one gentle question first: how do you live your day? Rest is usually the answer women have stopped allowing themselves.",
+      name: "Dr. Lakshmi Iyer",
+      role: "Ayurveda Physician · BAMS, MD (Ayurveda)",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "Is Ayurveda a replacement for medical treatment?",
+        a: "No. Our Ayurvedic therapies are for rest and wellbeing and work alongside your medical care. If you have a health condition, keep seeing your doctor and tell our physician about any medicines you take.",
+      },
+      {
+        q: "Are the oils safe for my skin?",
+        a: "The physician chooses oils for your skin and season, and we patch test if you have sensitive skin or allergies.",
+      },
+      {
+        q: "Can I have therapies during my period or pregnancy?",
+        a: "Some therapies are paused during your period, and pregnancy needs a gentler plan. Tell the physician at your consultation and the programme will be adjusted.",
+      },
+    ],
+    related: ["recovery", "yoga-academy", "medi-facials"],
+    firstVisit: "Ayurvedic consultation",
+    results: false,
+  },
+  {
+    slug: "recovery",
+    group: "ayurveda-recovery",
+    title: "Recovery",
+    heading: ["Rest &", "recovery"],
+    keywords: "Massage, compression, sauna",
+    tagline: "Because rest is part of the work.",
+    summary: "Deep tissue massage, compression therapy and infrared sauna, planned by a physiotherapist.",
+    intro:
+      "Long days at a desk, training, travel, a new baby: bodies need to recover, and most of us never give them the chance. Recovery at VO2 brings hands-on therapy and calm technology together, planned by a physiotherapist so every session has a purpose.",
+    tone: "linear-gradient(174deg,#ece2da 0%,#c9a294 50%,#6f3330 100%)",
+    brief: "A woman wrapped in a soft robe, eyes closed, after a session. Linen, steam, stillness.",
+    concerns: ["Muscle soreness", "Stiff neck & shoulders", "Heavy, tired legs", "Recovery after exercise", "Poor sleep", "Postnatal recovery"],
+    items: [
+      {
+        name: "Recovery assessment",
+        description: "A short assessment with a physiotherapist to find where you hold tension and what your body needs most.",
+        duration: "30 min",
+        sessions: "1",
+        downtime: "None",
+      },
+      {
+        name: "Deep tissue & sports massage",
+        description: "Firm, focused massage for tight muscles and knots, adjusted to what feels right for you.",
+        duration: "45–60 min",
+        sessions: "Weekly or fortnightly",
+        downtime: "Possible mild soreness for a day",
+      },
+      {
+        name: "Compression therapy",
+        description: "Air-filled sleeves that gently squeeze and release the legs, helping them feel lighter after long days or training.",
+        duration: "30 min",
+        sessions: "As needed",
+        downtime: "None",
+      },
+      {
+        name: "Infrared sauna",
+        description: "Gentle, dry warmth in a private cabin to relax muscles and quiet the mind. Water and a rest corner afterwards.",
+        duration: "30–40 min",
+        sessions: "As needed",
+        downtime: "None; drink plenty of water",
+      },
+      {
+        name: "Postnatal recovery plan",
+        description: "A gentle series of massage, breath work and guided rest for the months after birth, cleared by your doctor first.",
+        duration: "60 min",
+        sessions: "Series of 4–6",
+        downtime: "None",
+      },
+    ],
+    steps: [
+      { title: "Assess", body: "A physiotherapist checks how you move, where you feel tight and what you do in a typical week." },
+      { title: "Plan", body: "A simple plan of sessions, with prices, built around your work, training or new routine." },
+      { title: "Recover", body: "Sessions in a warm, private room, with time afterwards to rest before you head back out." },
+      { title: "Keep going", body: "Stretches and habits to use at home, and a follow-up on WhatsApp within 48 hours." },
+    ],
+    note: {
+      quote: "Most women only rest when their body forces them to. We'd like rest to be planned, not earned.",
+      name: "Dr. Sneha Kulkarni",
+      role: "Physiotherapist · BPT, MPT (Musculoskeletal)",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "Is infrared sauna safe for everyone?",
+        a: "It is not suitable during pregnancy, with some heart conditions or with certain medicines. We ask a few health questions before your first session.",
+      },
+      {
+        q: "Will deep tissue massage hurt?",
+        a: "It should feel firm, never painful. Tell your therapist at any point and the pressure will be adjusted.",
+      },
+      {
+        q: "How soon after giving birth can I start?",
+        a: "Usually after your six-week check, once your doctor has cleared you. After a caesarean, we wait until the wound has fully healed.",
+      },
+    ],
+    related: ["physiotherapy", "ayurveda", "body"],
+    firstVisit: "Recovery assessment",
+    results: false,
+  },
+  {
+    slug: "physiotherapy",
+    group: "movement",
+    title: "Physiotherapy",
+    heading: ["Women's", "physiotherapy"],
+    keywords: "Back pain, posture, pelvic health",
+    tagline: "Move without pain, at every stage of life.",
+    summary: "Physiotherapy for back and neck pain, posture, sports injuries and pelvic health.",
+    intro:
+      "Women's bodies go through more change than most physiotherapy plans allow for: pregnancy, desk-bound years, hormonal shifts, menopause. Our physiotherapists assess how you move, explain what they find in plain words, and build a plan that fits your life.",
+    tone: "linear-gradient(176deg,#ede3db 0%,#cfa898 52%,#8a3d35 100%)",
+    brief: "A physiotherapist's hands guiding a client's shoulder, natural light, a calm studio.",
+    concerns: ["Back & neck pain", "Desk posture", "Knee & joint pain", "Sports injuries", "Pelvic floor health", "Postnatal recovery", "Pain after surgery"],
+    items: [
+      {
+        name: "Physiotherapy assessment",
+        description: "A thorough assessment of how you move, where it hurts and why, with a clear explanation and a written plan.",
+        duration: "45 min",
+        sessions: "1",
+        downtime: "None",
+      },
+      {
+        name: "Back & neck pain care",
+        description: "Hands-on therapy and simple exercises to ease pain and stop it coming back, including advice for your desk and sleep.",
+        duration: "45 min",
+        sessions: "4–8, weekly",
+        downtime: "None",
+      },
+      {
+        name: "Posture correction",
+        description: "A programme for the effects of long hours at a laptop or phone: tight shoulders, a sore lower back and headaches.",
+        duration: "45 min",
+        sessions: "6, weekly",
+        downtime: "None",
+      },
+      {
+        name: "Pelvic floor & postnatal care",
+        description: "Private, gentle care for pelvic floor weakness, leaking, diastasis and recovery after birth, by a specially trained physiotherapist.",
+        duration: "45–60 min",
+        sessions: "6–10",
+        downtime: "None",
+      },
+      {
+        name: "Sports injury rehab",
+        description: "Step-by-step rehabilitation after a sprain, strain or surgery, so you return to running, dancing or training with confidence.",
+        duration: "45 min",
+        sessions: "As needed",
+        downtime: "None",
+      },
+    ],
+    steps: [
+      { title: "Assess", body: "A full assessment of how you move, your history and what you would like to get back to doing." },
+      { title: "Explain", body: "What is causing your pain, in plain words, and a written plan with the number of sessions and prices." },
+      { title: "Treat", body: "Hands-on therapy and guided exercise in a private room, at a pace that feels right for you." },
+      { title: "Progress", body: "Exercises to do at home, a follow-up on WhatsApp within 48 hours, and regular reviews of your progress." },
+    ],
+    note: {
+      quote: "Leaking, back pain after pregnancy, a stiff neck from work: women are told these are normal. Common, yes. Something to live with, no.",
+      name: "Dr. Sneha Kulkarni",
+      role: "Physiotherapist · BPT, MPT (Musculoskeletal)",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "Do I need a doctor's referral?",
+        a: "No. You can book an assessment directly. If we think you need a scan or a doctor's opinion, we will tell you.",
+      },
+      {
+        q: "Is pelvic floor physiotherapy only for after pregnancy?",
+        a: "No. It helps at any age, including during pregnancy, around menopause and for anyone with leaking, heaviness or pelvic pain.",
+      },
+      {
+        q: "What should I wear?",
+        a: "Comfortable clothes you can move in. For a shoulder or back assessment, a vest top is helpful.",
+      },
+    ],
+    related: ["pilates", "recovery", "yoga-academy"],
+    firstVisit: "45-min assessment",
+    results: false,
+  },
+  {
+    slug: "pilates",
+    group: "movement",
+    title: "Pilates",
+    heading: ["Pilates", "studio"],
+    keywords: "Mat, reformer, core strength",
+    tagline: "Strength from the centre, without strain.",
+    summary: "Mat and reformer Pilates, prenatal and postnatal classes, and clinical Pilates with a physiotherapist.",
+    intro:
+      "Pilates builds quiet, deep strength: a stronger core, a straighter back and joints that feel looked after. Classes at VO2 are small, so every instructor can watch your form, and our physiotherapists can adapt sessions after injury or pregnancy.",
+    tone: "linear-gradient(170deg,#f0e6de 0%,#d7b2a2 54%,#9c4e43 100%)",
+    brief: "A reformer in a sunlit studio, a woman mid-stretch, long lines and pale wood.",
+    concerns: ["Weak core", "Back pain", "Poor posture", "Stiffness", "Pregnancy & postnatal", "Low energy"],
+    items: [
+      {
+        name: "Private intro session",
+        description: "A one-to-one session to learn the basics, check your posture and find the right class for you.",
+        duration: "50 min",
+        sessions: "1",
+        downtime: "All levels",
+      },
+      {
+        name: "Mat Pilates",
+        description: "Small-group classes on the mat, building core strength, balance and flexibility with slow, controlled movement.",
+        duration: "50 min",
+        sessions: "2–3 a week",
+        downtime: "Beginner to advanced",
+      },
+      {
+        name: "Reformer Pilates",
+        description: "Classes on the reformer, a sliding machine with springs that supports and challenges you at the same time.",
+        duration: "50 min",
+        sessions: "2–3 a week",
+        downtime: "After an intro session",
+      },
+      {
+        name: "Prenatal & postnatal Pilates",
+        description: "Gentle classes for pregnancy and the months after birth, with attention to the pelvic floor and core.",
+        duration: "45 min",
+        sessions: "1–2 a week",
+        downtime: "With your doctor's clearance",
+      },
+      {
+        name: "Clinical Pilates",
+        description: "One-to-one Pilates led by a physiotherapist, for recovery from injury, back pain or surgery.",
+        duration: "50 min",
+        sessions: "Series of 6–8",
+        downtime: "Tailored to you",
+      },
+    ],
+    steps: [
+      { title: "Meet", body: "A private intro session to understand your body, your goals and any injuries or recent pregnancy." },
+      { title: "Plan", body: "The right class and how often, with prices and a simple timetable you can actually keep." },
+      { title: "Practise", body: "Small classes with an instructor who watches your form and adjusts every exercise for you." },
+      { title: "Progress", body: "Regular check-ins as you grow stronger, and a move to the next level when you are ready." },
+    ],
+    note: {
+      quote: "Pilates isn't about looking a certain way. It's the strength that lets you carry the shopping, the baby and the day.",
+      name: "Tara D'Souza",
+      role: "Pilates Lead · Comprehensive Mat & Reformer certification",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "I've never done Pilates. Can I start with reformer?",
+        a: "Yes, after a private intro session, so you learn how the machine works and how to move safely.",
+      },
+      {
+        q: "How soon will I feel a difference?",
+        a: "Most people feel stronger and stand taller within four to six weeks of two classes a week.",
+      },
+      {
+        q: "Is Pilates safe during pregnancy?",
+        a: "Yes, in a prenatal class and with your doctor's agreement. Exercises are changed for each trimester.",
+      },
+    ],
+    related: ["physiotherapy", "yoga-academy", "zumba"],
+    firstVisit: "Private intro session",
+    results: false,
+  },
+  {
+    slug: "zumba",
+    group: "movement",
+    title: "Zumba",
+    heading: ["Zumba", "classes"],
+    keywords: "Dance fitness, cardio, joy",
+    tagline: "An hour of music, movement and not thinking about anything else.",
+    summary: "Energetic dance-fitness classes, low-impact Zumba Gold, toning sessions and private group parties.",
+    intro:
+      "Zumba is exercise that doesn't feel like exercise: Latin and Bollywood rhythms, simple steps and a room full of women having a good time. Classes are led by licensed instructors, with options for every fitness level and every age.",
+    tone: "linear-gradient(168deg,#f3e3da 0%,#e2a68f 50%,#b24838 100%)",
+    brief: "A small group of women mid-step, laughing, warm studio light, movement blur.",
+    concerns: ["Low energy", "Stress", "Cardio fitness", "Weight management", "Coordination", "Making time for fun"],
+    items: [
+      {
+        name: "Zumba Fitness",
+        description: "The classic class: a full hour of easy-to-follow dance steps that raise your heart rate and your mood.",
+        duration: "60 min",
+        sessions: "2–3 a week",
+        downtime: "All levels",
+      },
+      {
+        name: "Zumba Gold",
+        description: "A lower-impact class with gentler moves, ideal for beginners, older adults or anyone returning to exercise.",
+        duration: "45 min",
+        sessions: "2 a week",
+        downtime: "Beginner",
+      },
+      {
+        name: "Zumba Toning",
+        description: "Dance fitness with light toning sticks to build strength in the arms, core and legs.",
+        duration: "45 min",
+        sessions: "1–2 a week",
+        downtime: "Intermediate",
+      },
+      {
+        name: "Private group sessions",
+        description: "A private class for friends, colleagues or a bride and her family before the wedding.",
+        duration: "60 min",
+        sessions: "On request",
+        downtime: "All levels",
+      },
+    ],
+    steps: [
+      { title: "Try", body: "Join an intro class and find your feet. No dance experience needed, just comfortable shoes." },
+      { title: "Choose", body: "Pick the classes and times that suit you, with simple monthly packages." },
+      { title: "Move", body: "Small, friendly classes where the instructor shows every step and offers easier options." },
+      { title: "Keep it up", body: "A timetable that fits your week, reminders on WhatsApp, and a community to keep you coming back." },
+    ],
+    note: {
+      quote: "I tell every new class: nobody is watching your feet. They're all too busy smiling.",
+      name: "Neha Kapoor",
+      role: "Zumba Instructor · Licensed ZIN member",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "I can't dance. Will I keep up?",
+        a: "Yes. Steps are simple and repeated, and the instructor always shows an easier version. Most people feel at home by the third class.",
+      },
+      {
+        q: "What should I wear?",
+        a: "Comfortable workout clothes and supportive trainers. Bring water and a small towel.",
+      },
+      {
+        q: "Is Zumba safe if I have knee problems?",
+        a: "Try Zumba Gold, which is low impact, and tell your instructor. If you have pain, see one of our physiotherapists first.",
+      },
+    ],
+    related: ["pilates", "yoga-academy", "recovery"],
+    firstVisit: "Intro class",
+    results: false,
+  },
+  {
+    slug: "yoga-academy",
+    group: "movement",
+    title: "Yoga Academy",
+    heading: ["Yoga", "academy"],
+    keywords: "Classes, prenatal, teacher training",
+    tagline: "A practice to keep, taught with care.",
+    summary: "Daily classes, a beginners' course, prenatal yoga, breath work and a 200-hour teacher training.",
+    intro:
+      "The VO2 Yoga Academy teaches yoga as a lifelong practice: strength, steadiness and a calmer mind. Begin with a four-week foundations course, join daily classes, or deepen your practice with our teacher training. Every teacher is certified and every class stays small.",
+    tone: "linear-gradient(172deg,#eee5db 0%,#d2ae94 52%,#8e4b39 100%)",
+    brief: "A woman in a seated twist on a linen mat, morning light through a jaali screen.",
+    concerns: ["Stress & anxiety", "Flexibility", "Strength & balance", "Sleep", "Pregnancy", "Hormonal wellbeing", "Deepening a practice"],
+    items: [
+      {
+        name: "Foundations course",
+        description: "Four weeks for complete beginners: the basic postures, breathing and how to practise safely at home.",
+        duration: "60 min",
+        sessions: "8 classes over 4 weeks",
+        downtime: "Beginner",
+      },
+      {
+        name: "Daily classes",
+        description: "Morning and evening Hatha and Vinyasa classes, from slow and steady to strong and flowing.",
+        duration: "60 min",
+        sessions: "As often as you like",
+        downtime: "All levels",
+      },
+      {
+        name: "Prenatal yoga",
+        description: "Gentle classes for each trimester to ease aches, support breathing and prepare for birth.",
+        duration: "60 min",
+        sessions: "1–2 a week",
+        downtime: "With your doctor's clearance",
+      },
+      {
+        name: "Yoga for hormonal wellbeing",
+        description: "A calming practice designed with our doctors for women living with PCOS, thyroid conditions or perimenopause, alongside medical care.",
+        duration: "60 min",
+        sessions: "2 a week",
+        downtime: "All levels",
+      },
+      {
+        name: "Breath work & meditation",
+        description: "Short, guided sessions to slow the breath, settle the mind and help with sleep.",
+        duration: "30–45 min",
+        sessions: "Weekly",
+        downtime: "All levels",
+      },
+      {
+        name: "200-hour teacher training",
+        description: "An in-depth training in postures, anatomy, philosophy and teaching, for those who wish to teach or simply go deeper.",
+        duration: "Weekends",
+        sessions: "Over 4–6 months",
+        downtime: "Regular practice advised",
+      },
+    ],
+    steps: [
+      { title: "Begin", body: "A short chat with a teacher about your experience, health and what you hope yoga will give you." },
+      { title: "Learn", body: "The foundations course, or the right daily class for your level, with a simple monthly package." },
+      { title: "Practise", body: "Small classes where your teacher knows your name, your body and your progress." },
+      { title: "Deepen", body: "Workshops, retreats and teacher training when you are ready to take your practice further." },
+    ],
+    note: {
+      quote: "Yoga isn't about touching your toes. It's about what you notice on the way down.",
+      name: "Meghna Bhat",
+      role: "Yoga Academy Lead · E-RYT 500",
+      placeholder: true,
+    },
+    faqs: [
+      {
+        q: "I'm not flexible. Can I still do yoga?",
+        a: "Yes. Flexibility comes from practice, not before it. Teachers offer props and simpler versions of every pose.",
+      },
+      {
+        q: "Is the teacher training recognised?",
+        a: "The 200-hour programme is designed to meet international registration standards. Ask us for the current syllabus and dates.",
+      },
+      {
+        q: "Can yoga help with PCOS?",
+        a: "Regular yoga can support stress, sleep and overall wellbeing, which helps many women feel better. It works alongside medical care, not instead of it.",
+      },
+    ],
+    related: ["pilates", "ayurveda", "physiotherapy"],
+    firstVisit: "Chat with a teacher",
+    results: false,
+  },
 ];
+
+// The four groups that organise the menu, footer, home page and treatments index
+export const groups: {
+  slug: GroupSlug;
+  title: string;
+  heading: [string, string];
+  blurb: string;
+  photo: string; // a category photo that represents the group
+  firstVisit: string;
+  cta: string;
+  // Copy for the treatment page's offer section
+  unit: string;
+  guide: string;
+  levelLabel: string; // the third meta label on each item
+}[] = [
+  {
+    slug: "skin-aesthetics",
+    title: "Skin & Aesthetics",
+    heading: ["Skin &", "aesthetics"],
+    blurb: "Doctor-led care for skin, hair and body, planned around Indian skin.",
+    photo: "skin",
+    firstVisit: "40-min consultation",
+    cta: "Book a consultation",
+    unit: "treatments",
+    guide: "Your doctor will recommend the right combination at your consultation.",
+    levelLabel: "Downtime",
+  },
+  {
+    slug: "ayurveda-recovery",
+    title: "Ayurveda & Recovery",
+    heading: ["Ayurveda &", "recovery"],
+    blurb: "Warm oils, unhurried hands and modern recovery, for rest that restores.",
+    photo: "ayurveda",
+    firstVisit: "Consultation",
+    cta: "Book a session",
+    unit: "therapies",
+    guide: "Your physician or therapist will recommend the right combination for you.",
+    levelLabel: "Downtime",
+  },
+  {
+    slug: "movement",
+    title: "Movement",
+    heading: ["Move", "well"],
+    blurb: "Physiotherapy, Pilates, Zumba and our Yoga Academy, for strength that lasts.",
+    photo: "yoga-academy",
+    firstVisit: "Intro session",
+    cta: "Book an intro session",
+    unit: "ways to move",
+    guide: "Your physiotherapist or teacher will help you choose at your intro session.",
+    levelLabel: "Level",
+  },
+  {
+    slug: "dental",
+    title: "Dental",
+    heading: ["Dental &", "smile care"],
+    blurb: "Healthy, natural smiles, from check-ups to aligners and implants, led by a dentist.",
+    photo: "dental",
+    firstVisit: "Dental check-up",
+    cta: "Book a dental visit",
+    unit: "treatments",
+    guide: "Your dentist will recommend the right treatment at your check-up.",
+    levelLabel: "Downtime",
+  },
+];
+
+export const getGroup = (slug: GroupSlug) => groups.find((g) => g.slug === slug)!;
+
+// Groups with their categories, in menu order
+export const groupedCategories = groups.map((g) => ({ ...g, items: categories.filter((c) => c.group === g.slug) }));
+
+export const groupHref = (slug: GroupSlug) => `/treatments#${slug}`;
 
 export function getCategory(slug: string) {
   return categories.find((c) => c.slug === slug);

@@ -5,12 +5,13 @@ import { Motif } from "@/components/ui/Motif";
 import { Photo, PhotoCredit, hasPhoto } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { TreatmentCard } from "@/components/ui/TreatmentCard";
-import { defaultSteps, getCategory, type Category } from "@/content/treatments";
+import { defaultSteps, getCategory, getGroup, groupHref, type Category } from "@/content/treatments";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { breadcrumbLd } from "@/lib/seo";
 import styles from "./treatment.module.css";
 
 function Hero({ c }: { c: Category }) {
+  const group = getGroup(c.group);
   return (
     <section className={styles.hero}>
       <div className={`wrap ${styles.heroGrid}`}>
@@ -20,6 +21,12 @@ function Hero({ c }: { c: Category }) {
             <span aria-hidden="true">/</span>
             <Link href="/treatments">Treatments</Link>
             <span aria-hidden="true">/</span>
+            {group.title !== c.title && (
+              <>
+                <Link href={groupHref(c.group)}>{group.title}</Link>
+                <span aria-hidden="true">/</span>
+              </>
+            )}
             <span aria-current="page">{c.title}</span>
           </nav>
           <h1 className={styles.title}>
@@ -29,16 +36,16 @@ function Hero({ c }: { c: Category }) {
           <p className={styles.intro}>{c.intro}</p>
           <div className={styles.actions}>
             <a className="btn btn-solid" href="#book">
-              Book a consultation <span className="arrow">→</span>
+              {group.cta} <span className="arrow">→</span>
             </a>
             <a className="btn btn-ghost" href="#offer">
-              See treatments
+              See {group.unit}
             </a>
           </div>
           <dl className={styles.facts}>
             <div>
-              <dt>Treatments</dt>
-              <dd>{c.items.length} options</dd>
+              <dt>Options</dt>
+              <dd>{c.items.length} to choose from</dd>
             </div>
             <div>
               <dt>Led by</dt>
@@ -46,7 +53,7 @@ function Hero({ c }: { c: Category }) {
             </div>
             <div>
               <dt>First visit</dt>
-              <dd>40-min consultation</dd>
+              <dd>{c.firstVisit ?? group.firstVisit}</dd>
             </div>
           </dl>
         </div>
@@ -88,19 +95,17 @@ function Concerns({ c }: { c: Category }) {
 }
 
 function Offer({ c }: { c: Category }) {
+  const group = getGroup(c.group);
   return (
     <section id="offer" className={styles.offer}>
       <div className="wrap">
         <Reveal className="section-head">
           <div>
             <h2 className="display">
-              {c.items.length} treatments, <em>one plan.</em>
+              {c.items.length} {group.unit}, <em>one plan.</em>
             </h2>
           </div>
-          <p>
-            Your doctor will recommend the right combination at your consultation. Durations and sessions are a guide;
-            your plan will be your own.
-          </p>
+          <p>{group.guide} Durations and sessions are a guide; your plan will be your own.</p>
         </Reveal>
 
         <Reveal>
@@ -120,7 +125,7 @@ function Offer({ c }: { c: Category }) {
                       <dd>{item.sessions}</dd>
                     </div>
                     <div>
-                      <dt>Downtime</dt>
+                      <dt>{group.levelLabel}</dt>
                       <dd>{item.downtime}</dd>
                     </div>
                   </dl>
@@ -290,18 +295,19 @@ export function TreatmentDetail({ category }: { category: Category }) {
         data={breadcrumbLd([
           { name: "Home", path: "/" },
           { name: "Treatments", path: "/treatments" },
+          { name: getGroup(category.group).title, path: groupHref(category.group) },
           { name: category.title, path: `/treatments/${category.slug}` },
         ])}
       />
       <Hero c={category} />
       <Concerns c={category} />
       <Offer c={category} />
-      <Results c={category} />
+      {category.results !== false && <Results c={category} />}
       <Process c={category} />
       <DoctorNote c={category} />
       <Faqs c={category} />
       <Related c={category} />
-      <Booking defaultConcern={category.title} />
+      <Booking defaultConcern={getGroup(category.group).title} />
     </>
   );
 }

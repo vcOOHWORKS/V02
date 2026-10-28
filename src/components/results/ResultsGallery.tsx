@@ -13,7 +13,8 @@ type Props = {
 // Builds the gallery from real, consented cases. A treatment with no cases yet
 // gets clearly labelled empty frames; nothing about a case is ever invented.
 export function ResultsGallery({ treatment, filters = false, limit }: Props) {
-  const scope = treatment ? categories.filter((c) => c.slug === treatment) : categories;
+  // Movement and therapy categories have no before/after gallery
+  const scope = categories.filter((c) => c.results !== false && (!treatment || c.slug === treatment));
   const slots: Slot[] = scope.flatMap((c): Slot[] => {
     const real = cases.filter((x) => x.treatment === c.slug);
     const demo = demoMode && !real.length ? demoCases.filter((x) => x.treatment === c.slug) : [];

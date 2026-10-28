@@ -6,7 +6,7 @@ import { LinkPending } from "@/components/ui/LinkPending";
 import { Logo } from "@/components/ui/Logo";
 import { Photo } from "@/components/ui/Photo";
 import { clinic, nav } from "@/content/site";
-import { categories, treatmentHref } from "@/content/treatments";
+import { groupHref, groupedCategories, treatmentHref, type GroupSlug } from "@/content/treatments";
 import styles from "./Nav.module.css";
 
 type Props = {
@@ -23,6 +23,7 @@ export function Nav({ art, current }: Props) {
   const [open, setOpen] = useState(false); // mobile menu
   const [menu, setMenu] = useState(false); // desktop treatments menu
   const [mobileTreatments, setMobileTreatments] = useState(false);
+  const [group, setGroup] = useState<GroupSlug>(groupedCategories[0].slug); // active group in the mega menu
   const menuRef = useRef<HTMLDivElement>(null);
   const closeTimer = useRef<number | undefined>(undefined);
   const lastPointer = useRef<string>("");
@@ -123,39 +124,96 @@ export function Nav({ art, current }: Props) {
                 <span className={`${styles.chevron} ${menu ? styles.chevronOpen : ""}`} aria-hidden="true" />
               </button>
 
-              {/* Mega menu: an introduction beside all nine categories as image tiles */}
+              {/* Mega menu: the four groups on the left; hovering or choosing one shows its
+                  treatments and a featured card. All panels stay in the DOM for crawlers. */}
               <div id="treatments-menu" className={`${styles.mega} ${menu ? styles.megaOpen : ""}`} inert={!menu}>
                 <div className={`wrap ${styles.megaInner}`}>
-                  <div className={styles.megaIntro}>
-                    <p className={styles.megaHeading}>
-                      Nine ways we <em>care for you.</em>
-                    </p>
-                    <p className={styles.megaText}>Not sure where to begin? A consultation is the best first step.</p>
-                    <div className={styles.megaLinks}>
+                  <div className={styles.railCol}>
+                  <div className={styles.rail} role="tablist" aria-label="Treatment groups" aria-orientation="vertical">
+                    {groupedCategories.map((g, i) => (
+                      <button
+                        key={g.slug}
+                        type="button"
+                        role="tab"
+                        id={`tab-${g.slug}`}
+                        aria-selected={group === g.slug}
+                        aria-controls={`panel-${g.slug}`}
+                        tabIndex={group === g.slug ? 0 : -1}
+                        className={styles.railTab}
+                        onPointerEnter={(e) => e.pointerType === "mouse" && setGroup(g.slug)}
+                        onFocus={() => setGroup(g.slug)}
+                        onClick={() => setGroup(g.slug)}
+                        onKeyDown={(e) => {
+                          // Arrow keys move between groups, as in any vertical tab list
+                          const step = e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0;
+                          if (!step) return;
+                          e.preventDefault();
+                          const next = groupedCategories[(i + step + groupedCategories.length) % groupedCategories.length];
+                          setGroup(next.slug);
+                          document.getElementById(`tab-${next.slug}`)?.focus();
+                        }}
+                      >
+                        <span className={styles.railTitle}>{g.title}</span>
+                        <span className={styles.railCount}>{String(g.items.length).padStart(2, "0")}</span>
+                      </button>
+                    ))}
+                  </div>
+                    <div className={styles.railLinks}>
                       <Link href="/treatments" className={styles.megaLink} onClick={closeAll}>
                         All treatments
                       </Link>
-                      <a href="#book" className={styles.megaLink} onClick={closeAll}>
-                        Book a consultation
-                      </a>
+                      <Link href="/salon-nails" className={styles.megaLink} onClick={closeAll}>
+                        Salon &amp; nails
+                      </Link>
                     </div>
                   </div>
-                  <ul className={styles.megaGrid}>
-                    {categories.map((c) => (
-                      <li key={c.slug}>
-                        <Link href={treatmentHref(c.slug)} className={styles.tile} onClick={closeAll}>
-                          <span className={styles.tileImage} style={{ background: c.tone }} aria-hidden="true">
-                            <Photo name={c.slug} sizes="220px" className={styles.tilePhoto} />
-                          </span>
-                          <span className={styles.tileTitle}>
-                            {c.title}
-                            <LinkPending />
-                          </span>
-                          <span className={styles.tileKeywords}>{c.keywords}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+
+                  {groupedCategories.map((g) => (
+                    <div
+                      key={g.slug}
+                      id={`panel-${g.slug}`}
+                      role="tabpanel"
+                      aria-labelledby={`tab-${g.slug}`}
+                      className={styles.groupPanel}
+                      hidden={group !== g.slug}
+                    >
+                      <ul className={`${styles.megaGrid} ${g.items.length === 1 ? styles.megaGridSolo : ""}`}>
+                        {g.items.map((c) => (
+                          <li key={c.slug}>
+                            <Link href={treatmentHref(c.slug)} className={styles.tile} onClick={closeAll}>
+                              <span className={styles.tileImage} style={{ background: c.tone }} aria-hidden="true">
+                                <Photo name={c.slug} sizes="80px" className={styles.tilePhoto} />
+                              </span>
+                              <span className={styles.tileTitle}>
+                                {c.title}
+                                <LinkPending />
+                              </span>
+                              <span className={styles.tileKeywords}>{c.keywords}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Link href={groupHref(g.slug)} className={styles.feature} onClick={closeAll}>
+                        <span className={styles.featureImage} style={{ background: g.items[0]?.tone }} aria-hidden="true">
+                          <Photo name={g.photo} sizes="280px" className={styles.tilePhoto} />
+                        </span>
+                        <span className={styles.featureTitle}>
+                          {g.heading[0]} <em>{g.heading[1]}</em>
+                        </span>
+                        <span className={styles.featureText}>{g.blurb}</span>
+                        <span className={styles.megaLink}>Explore {g.title}</span>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+                <div className={styles.megaFoot}>
+                  <div className={`wrap ${styles.megaFootInner}`}>
+                    <span>Not sure where to begin? A consultation is the best first step.</span>
+                    <a href="#book" className={styles.megaLink} onClick={closeAll}>
+                      Book a consultation
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -213,14 +271,23 @@ export function Nav({ art, current }: Props) {
                   inert={!mobileTreatments}
                 >
                   <ul className={styles.panelSubInner}>
-                    {categories.map((c) => (
-                      <li key={c.slug}>
-                        <Link href={treatmentHref(c.slug)} onClick={closeAll} className={styles.subLink}>
-                          <span className={styles.subThumb} style={{ background: c.tone }} aria-hidden="true">
-                            <Photo name={c.slug} sizes="44px" />
-                          </span>
-                          {c.title}
+                    {groupedCategories.map((g) => (
+                      <li key={g.slug} className={styles.subGroup}>
+                        <Link href={groupHref(g.slug)} onClick={closeAll} className={styles.subGroupTitle}>
+                          {g.title}
                         </Link>
+                        <ul>
+                          {g.items.map((c) => (
+                            <li key={c.slug}>
+                              <Link href={treatmentHref(c.slug)} onClick={closeAll} className={styles.subLink}>
+                                <span className={styles.subThumb} style={{ background: c.tone }} aria-hidden="true">
+                                  <Photo name={c.slug} sizes="44px" />
+                                </span>
+                                {c.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </li>
                     ))}
                     <li>

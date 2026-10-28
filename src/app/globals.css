@@ -488,6 +488,7 @@ main :where(p, dd, li) > a:where(:not([class])) {
 @media (pointer: coarse) {
   nav[aria-label="Breadcrumb"] a,
   footer li a,
+  footer h4 a,
   footer nav[aria-label="Legal"] a,
   a[class*="allLink"],
   a[class*="bookLink"],
